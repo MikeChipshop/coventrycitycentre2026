@@ -1,0 +1,33 @@
+:root {
+    /* Colours */
+    --color-light: #ffffff;
+	--color-light-medium: #f9f9f9;
+	--color-light-dark: #c0c0c0;	
+
+	/* Structure */
+	--max-width: 1480px;
+}
+
+.editor-post-title__input {
+    font-family: "Poppins", sans-serif;
+	font-style: normal;
+	font-weight:400;
+}
+/* 
+ * Main column width
+ * This changes it from the default 580px to 720px
+ */
+ .wp-block {
+    max-width: 100%!important;
+    font-family: "Poppins", sans-serif;
+	font-style: normal;
+	font-weight:400;
+}
+
+/* 
+ * Width of "wide" blocks
+ * This changes it from the default 1080px to 1280px
+ */
+.wp-block[data-align="wide"] {
+    max-width: 100%!important;
+}
