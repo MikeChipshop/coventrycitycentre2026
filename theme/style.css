@@ -44,6 +44,24 @@ clear:both}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav
 }
 
 /* ------------------------------------------------
+ Fonts
+------------------------------------------------ 
+
+Proxima Nova Regular
+font-family: "proxima-nova", sans-serif;
+font-weight: 400;
+font-style: normal;
+Proxima Nova Bold
+font-family: "proxima-nova", sans-serif;
+font-weight: 700;
+font-style: normal;
+Proxima Nova Black
+font-family: "proxima-nova", sans-serif;
+font-weight: 900;
+font-style: normal;
+
+
+/* ------------------------------------------------
  Global
 ------------------------------------------------ */
 
@@ -58,11 +76,11 @@ html {
 }
 
 body {
-	font-family: "Poppins", sans-serif;
+	font-family: "proxima-nova", sans-serif;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	font-style: normal;
-	font-weight:300;
+	font-weight:400;
     background: var(--color-light);
     font-size:16px;
 	line-height:1.4;

@@ -13,7 +13,7 @@
 }
 
 .editor-post-title__input {
-    font-family: "Poppins", sans-serif;
+    font-family: "proxima-nova", sans-serif;
 	font-style: normal;
 	font-weight:400;
 }
@@ -23,7 +23,7 @@
  */
  .wp-block {
     max-width: 100%!important;
-    font-family: "Poppins", sans-serif;
+    font-family: "proxima-nova", sans-serif;
 	font-style: normal;
 	font-weight:400;
 }
