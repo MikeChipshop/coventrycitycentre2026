@@ -33,6 +33,11 @@ clear:both}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav
 	/* Colours */    
 	--color-light: #ffffff;
 	--color-dark: #000000;
+	--color-yellow: #f2b71b;
+	--color-pink: #ef4766;
+	--color-purple:#982567;
+	--color-light-blue: #527dbf;
+	--color-deep-blue:#314a64;
 
 	/* Structure */
 	--max-width: 1480px;

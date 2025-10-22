@@ -1,8 +1,12 @@
 :root {
     /* Colours */
     --color-light: #ffffff;
-	--color-light-medium: #f9f9f9;
-	--color-light-dark: #c0c0c0;	
+	--color-dark: #000000;
+	--color-yellow: #f2b71b;
+	--color-pink: #ef4766;
+	--color-purple:#982567;
+	--color-light-blue: #527dbf;
+	--color-deep-blue:#314a64;
 
     /* Structure */
 	--max-width: 1480px;
@@ -36,9 +40,11 @@ div[data-name="block_text_background_colour"] input[type="radio"]{
 .selected .color-swatch {
     box-shadow: 0px 0px 1px 2px rgba(25,137,193,1);
     opacity: 1;
-}
-
+}dark
 .color-swatch.dark {background-color:var(--color-dark);}
-.color-swatch.darkalt {background-color:var(--color-dark);}
-.color-swatch.darkgreen {background-color:var(--color-blue);}
-.color-swatch.highlight2 {background-color:var(--color-blue2);}
+.color-swatch.light {background-color:var(--color-light);}
+.color-swatch.yellow {background-color:var(--color-yellow);}
+.color-swatch.pink {background-color:var(--color-pink);}
+.color-swatch.purple {background-color:var(--color-purple);}
+.color-swatch.light-blue {background-color:var(--color-light-blue);}
+.color-swatch.deep-blue {background-color:var(--color-deep-blue);}

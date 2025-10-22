@@ -1,8 +1,12 @@
 :root {
     /* Colours */
     --color-light: #ffffff;
-	--color-light-medium: #f9f9f9;
-	--color-light-dark: #c0c0c0;	
+	--color-dark: #000000;
+	--color-yellow: #f2b71b;
+	--color-pink: #ef4766;
+	--color-purple:#982567;
+	--color-light-blue: #527dbf;
+	--color-deep-blue:#314a64;	
 
 	/* Structure */
 	--max-width: 1480px;
