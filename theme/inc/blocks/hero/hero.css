@@ -1,0 +1,183 @@
+.tfk_hero {
+    height: calc(60vh + 100px);
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+.tfk_hero .tfk_wrap {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    position: relative;
+    padding: 0px;
+}
+.tfk_hero.video .tfk_wrap {
+    background-color: var(--color-dark);
+}
+.tfk_hero .tfk_wrap::before,
+.tfk_hero.overlay-none .tfk_wrap::before {
+    content: "";
+    position: absolute;
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    display: block;
+    background:transparent;
+    z-index: 1;    
+}
+.tfk_hero.overlay-gradient .tfk_wrap::before {
+    background: rgb(128,128,128);
+    background: linear-gradient(180deg, rgba(128,128,128,1) 0%, rgba(255,255,255,0) 100%);
+    opacity: .5;
+}
+.tfk_hero.overlay-solid .tfk_wrap::before {
+    background: var(--color-blue);
+    opacity: .7;
+}
+
+.tfk_hero.button- .btn.cta a,
+.tfk_hero.button-light .btn.cta a {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    border-color: var(--color-light);
+}
+.tfk_hero.button- .btn.primary a svg path,
+.tfk_hero.button-light .btn.primary a svg path {
+    fill:var(--color-dark);
+}
+.tfk_hero.button-dark .btn.cta a {
+    background-color: var(--color-dark);
+    border-color: var(--color-dark);
+}
+.tfk_hero.button-grey .btn.cta a {
+    background-color: var(--color-grey);
+    border-color: var(--color-grey);
+}
+.tfk_hero.button-blue .btn.cta a {
+    background-color: var(--color-blue);
+    border-color: var(--color-blue);
+}
+.tfk_hero.button-green .btn.cta a {
+    background-color: var(--color-green);
+    border-color: var(--color-green);
+}
+.tfk_hero.button-khaki .btn.cta a {
+    background-color: var(--color-khaki);
+    border-color: var(--color-khaki);
+}
+.tfk_hero.video .tfk_wrap::before {
+    display:none;
+}
+.tfk_hero-video-wrap video {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    object-fit: cover;
+    height: 100%;
+}
+.tfk_hero.overlay-solid .tfk_hero-video-wrap::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 10;
+    opacity:0
+}
+.tfk_hero-content {
+    width: 100%;
+    max-width: 480px;
+    padding: 16px;
+    position: relative;
+    z-index: 8;
+    color:var(--color-light);
+    font-size:18px;
+}
+.tfk_hero-content h1 {
+    font-family: "canada-type-gibson", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--color-light);
+    font-size: 64px;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+.tfk_hero-content figure {
+    max-width:340px;
+    margin:0 auto;
+    width:100%;
+}
+.tfk_hero-content svg {
+    width: 100%;
+}
+.tfk_hero-content .btn{
+	padding-top:32px;
+}
+.tfk_hero-content-text {
+    padding-top:32px;
+}
+.tfk_hero-video-wrap {
+    position: relative;
+    width: 100%;
+    z-index: 6;
+    height: 100%;
+}
+.video .tfk_hero-content {
+    position:absolute;
+}
+.video .tfk_spinner {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    bottom: 32px;
+    right: 32px;
+    z-index: 4;
+    animation: spin .5s linear infinite;
+}
+.tfk_spinner::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-light);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 4px;
+    opacity: .7;    
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
+@media only screen and (max-width : 950px){
+    .tfk_hero-content figure {
+        max-width:280px;
+    }
+}
+@media only screen and (max-width : 800px){
+    .tfk_hero-content figure {
+        max-width:200px;
+    }
+    .tfk_hero-content h1 {
+        font-size: 40px;
+    }
+}
+@media only screen and (max-width : 700px){
+    .tfk_hero-content figure {
+        max-width:160px;
+    }
+    .tfk_hero-content h1 {
+        font-size: 30px;
+    }
+}
