@@ -1,4 +1,4 @@
-<footer class="ccc26_global-footer ccc26_background-dblue">
+<footer class="ccc26_global-footer ccc26_background-deep-blue">
     <div class="ccc26_wrap">
         <div class="ccc26_global-footer-top">
             <div class="ccc26_global-footer-column">
