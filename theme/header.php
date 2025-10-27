@@ -33,6 +33,14 @@
                         <polygon class="logo-2" points="107.67 98.7 119.93 120.95 124.48 114.6 107.67 98.7"/>
                     </svg>
                 </figure>
+                <div class="ccc26_site-title">
+                    <div>
+                        Welcome to
+                    </div>
+                    <div>
+                        Coventry <br/>City Centre
+                    </div>
+                </div>
             </div>
             <div class="ccc26_global-header-column">
                 <nav>

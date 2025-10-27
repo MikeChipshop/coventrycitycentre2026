@@ -2,6 +2,56 @@
     <?php if ( have_posts() ) : ?>
         <?php while ( have_posts() ) : the_post(); ?>    
             <main class="ccc26_page-content">
+                <section class="ccc26_navigation-grid">
+                    <div class="ccc26_wrap">
+                        <div class="ccc26_navigation-grid-column">
+                            <figure>
+                                <img src="<?php bloginfo('stylesheet_directory'); ?>/img/nav-grid-1.jpg" alt="Navigation Image">
+                                <h3>What's on</h3>
+                            </figure>
+                            <div class="ccc26_navigation-grid-content">
+                                <h2>Welcome to Coventry, a city rich in culture and history.</h2>
+                                <p>Thousands of people visit Coventry every year to experience our unique and exciting city. With a wide variety to see and do, we have handpicked some of the best for you.</p>
+                            </div>
+                        </div>
+                        <div class="ccc26_navigation-grid-column">
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/nav-grid-2.jpg">
+                                            <h3>Shop 'till you drop</h3>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/nav-grid-3.jpg">
+                                            <h3>Eating out</h3>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/nav-grid-4.jpg">
+                                            <h3>Heritage in Coventry</h3>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/nav-grid-5.jpg">
+                                            <h3>Staying over</h3>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/nav-grid-6.jpg">
+                                            <h3>Things to do</h3>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </section>
                 <section class="ccc26_carousel-grid ccc26_background-yellow">
                     <div class="ccc26_wrap">
                         <header>
@@ -28,7 +78,7 @@
                                             <img src="<?php bloginfo('stylesheet_directory'); ?>/img/carousel-2.jpg" alt="Sample Image">
                                             <button><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z"/></svg></button>
                                         </figure>
-                                        <h3>Herbert Art Gallery</h3>
+                                        <h3>The Wave Water Park</h3>
                                         <p>Find out more ></p>
                                     </a>
                                 </li>
@@ -38,7 +88,7 @@
                                             <img src="<?php bloginfo('stylesheet_directory'); ?>/img/carousel-3.jpg" alt="Sample Image">
                                             <button><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z"/></svg></button>
                                         </figure>
-                                        <h3>Herbert Art Gallery</h3>
+                                        <h3>The CBS Arena</h3>
                                         <p>Find out more ></p>
                                     </a>
                                 </li>
@@ -48,7 +98,7 @@
                                             <img src="<?php bloginfo('stylesheet_directory'); ?>/img/carousel-4.jpg" alt="Sample Image">
                                             <button><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z"/></svg></button>
                                         </figure>
-                                        <h3>Herbert Art Gallery</h3>
+                                        <h3>The HMV Empire</h3>
                                         <p>Find out more ></p>
                                     </a>
                                 </li>
@@ -58,7 +108,7 @@
                                             <img src="<?php bloginfo('stylesheet_directory'); ?>/img/carousel-5.jpg" alt="Sample Image">
                                             <button><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z"/></svg></button>
                                         </figure>
-                                        <h3>Herbert Art Gallery</h3>
+                                        <h3>The Belgrave Theatre</h3>
                                         <p>Find out more ></p>
                                     </a>
                                 </li>
@@ -98,6 +148,11 @@
                                 <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M782.87-98.52 526.91-354.48q-29.43 21.74-68.15 34.61Q420.04-307 375.48-307q-114.09 0-193.55-79.46-79.45-79.45-79.45-193.54 0-114.09 79.45-193.54Q261.39-853 375.48-853q114.09 0 193.54 79.46 79.46 79.45 79.46 193.54 0 45.13-12.87 83.28T601-429.7l256.52 257.09-74.65 74.09ZM375.48-413q69.91 0 118.45-48.54 48.55-48.55 48.55-118.46t-48.55-118.46Q445.39-747 375.48-747t-118.46 48.54Q208.48-649.91 208.48-580t48.54 118.46Q305.57-413 375.48-413Z"/></svg> Lucky Dip</a>
                             </div>
                         </div>
+                    </div>
+                </section>
+                <section class="ccc26_information">
+                    <div class="ccc26_wrap">
+                        
                     </div>
                 </section>
                 <section class="ccc26_pos">
