@@ -494,6 +494,31 @@ form textarea::placeholder {
 	line-height:1;
 }
 
+.ccc26_information-top {
+    display: flex;
+}
+.ccc26_information-column {
+    flex: 1;
+}
+.ccc26_information-map {
+	background-color: #ccc;
+}
+.ccc26_information-map img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+}
+.ccc26_information p {
+    padding-bottom: 16px;
+}
+.ccc26_information p:last-child {
+    padding-bottom: 0px;
+}
+.ccc26_pos-column-content {
+	text-align:center;
+	text-wrap:balance;
+}
 /* ------------------------------------------------
  POS Columns
 ------------------------------------------------ */

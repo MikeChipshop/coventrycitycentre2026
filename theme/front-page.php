@@ -152,7 +152,38 @@
                 </section>
                 <section class="ccc26_information">
                     <div class="ccc26_wrap">
-                        
+                        <div class="ccc26_information-top">
+                            <div class="ccc26_information-column">
+                                <h2>Test title</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lorem sem, cursus at purus sit amet, eleifend</p>
+                            </div>
+                            <div class="ccc26_information-column">
+                                <h2>Test title</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lorem sem, cursus at purus sit amet, eleifend</p>
+                            </div>
+                        </div>
+                        <div class="ccc26_information-top">
+                            <div class="ccc26_information-column">
+                                <div class="ccc26_information-map">
+                                    <img src="#" alt="Map">
+                                </div>
+                            </div>
+                            <div class="ccc26_information-column">
+                                <h2>Test title</h2>
+                                <p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</strong></p>
+                                <p>Sed a elementum nulla, non suscipit arcu. Nulla erat diam, vestibulum eget ex quis, convallis molestie mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In et purus in nulla faucibus rutrum. Mauris metus sem, finibus id accumsan ut, auctor nec nulla. Maecenas malesuada odio egestas enim varius ornare. Fusce iaculis condimentum turpis, a placerat massa.</p>
+                                <p>Fusce bibendum arcu mi, in molestie felis egestas congue. Proin at ultricies neque, id faucibus augue. Cras efficitur rhoncus nisi, sed sagittis metus efficitur eget.</p>
+                                <div class="ccc26_information-nav">
+                                    <ul>
+                                        <li><a href="#">Link 1</a></li>
+                                        <li><a href="#">Link 2</a></li>
+                                        <li><a href="#">Link 3</a></li>
+                                        <li><a href="#">Link 2</a></li>
+                                        <li><a href="#">Link 3</a></li>
+                                    </ul>
+                                </div>    
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <section class="ccc26_pos">
@@ -162,16 +193,20 @@
                                 <h2><span>Follow Us</span><br /> on <em>Socials</em></h2>
                             </div>
                             <div class="ccc26_pos-column-content">
-                               
+                               <p>Sed a elementum nulla, non suscipit arcu. Nulla erat diam, vestibulum eget ex quis, convallis molestie mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                                <p><a href="#">@CoventryCity</a></p>
                             </div>
+                            <?php get_template_part( 'inc/social', 'list' ); ?>
                         </div>
                         <div class="ccc26_pos-column ccc26_background-pink">
                             <div class="ccc26_pos-column-wrap">
                                 <h2><span>Sign Up</span><br /> for <em>Updates</em></h2>
                             </div>
                             <div class="ccc26_pos-column-content">
-                               
+                                <p>Sed a elementum nulla, non suscipit arcu. Nulla erat diam, vestibulum eget ex quis, convallis molestie mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                            
                             </div>
+                            
                         </div>
                     </div>
                 </section>
