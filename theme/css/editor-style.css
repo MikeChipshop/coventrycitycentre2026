@@ -11,7 +11,22 @@
 	/* Structure */
 	--max-width: 1480px;
 }
-
+.ccc26_background-yellow {
+	background-color:var(--color-yellow);
+	color:var(--color-deep-blue);
+}
+.ccc26_background-pink {
+	background-color:var(--color-pink);
+	color:var(--color-light);
+}
+.ccc26_background-purple {
+	background-color:var(--color-purple);
+	color:var(--color-light);
+}
+.ccc26_background-deep-blue {
+	background-color:var(--color-deep-blue);
+	color:var(--color-light);
+}
 .editor-post-title__input {
     font-family: "proxima-nova", sans-serif;
 	font-style: normal;
@@ -27,11 +42,19 @@
 	font-style: normal;
 	font-weight:400;
 }
-
-/* 
- * Width of "wide" blocks
- * This changes it from the default 1080px to 1280px
- */
 .wp-block[data-align="wide"] {
     max-width: 100%!important;
+}
+
+/* ------------------------------------------------
+ Carousel Grid
+------------------------------------------------ */
+.ccc26_carousel-grid-items ul {
+	list-style-type:none;
+}
+.ccc26_carousel-grid h3 {
+	margin:0px;
+}
+.ccc26_carousel-grid-items a {
+	text-decoration:none;
 }

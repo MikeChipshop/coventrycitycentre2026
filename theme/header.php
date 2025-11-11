@@ -6,12 +6,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <?php wp_head(); ?>
 </head>
+<?php
+    $headerSize = get_field('header_size');
+?>
 <body <?php body_class(); ?>> 
-    <header class="ccc26_global-header">
+    <header class="ccc26_global-header ccc26_header-size-<?php echo $headerSize; ?>">
         <div class="ccc26_wrap">
-            <div class="ccc26_global-header-column">
+            <a href="<?php bloginfo('url'); ?>" class="ccc26_global-header-column">
+
                 <figure>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 174.26 162.04" class="ccc26_main-logo">
                         <polygon class="logo-4" points="124.77 11.23 94.14 13.08 127.09 61.59 143 47.15 151.98 56.66 144.41 84.3 137.64 86.73 141.15 96.81 150.98 90.87 171.79 54.55 157.87 16.01 126.34 3.31 124.77 11.23"/>
@@ -38,10 +43,10 @@
                         Welcome to
                     </div>
                     <div>
-                        Coventry <br/>City Centre
+                        Coventry City Centre
                     </div>
                 </div>
-            </div>
+            </a>
             <div class="ccc26_global-header-column">
                 <nav>
                     <ul>
