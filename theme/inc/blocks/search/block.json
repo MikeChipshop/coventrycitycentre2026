@@ -1,0 +1,16 @@
+{
+    "name": "acf/search",
+    "title": "Search",
+    "description": "A custom search block.",
+    "style": [ "file:./search.css" ],
+    "category": "coventrycitycentre2026",
+    "icon": "search",
+    "keywords": ["layout", "Coventry City Centre", "Search"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "search.php"
+    },
+    "supports": {
+        "align": false
+    }
+}

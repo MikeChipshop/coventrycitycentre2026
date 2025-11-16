@@ -1,0 +1,17 @@
+{
+    "name": "acf/venue-info",
+    "title": "Venue Info",
+    "description": "A custom venue info block.",
+    "style": [ "file:./venue-info.css" ],
+    "category": "coventrycitycentre2026",
+    "icon": "admin-multisite",
+    "keywords": ["layout", "Coventry City Centre", "Venue", "Information"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "venue-info.php"
+    },
+    "supports": {
+        "align": false,
+        "jsx": false
+    }
+}

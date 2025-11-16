@@ -1,0 +1,14 @@
+{
+    "name": "acf/carousel-grid",
+    "title": "Carousel Grid",
+    "description": "A custom carousel grid block.",
+    "style": [ "file:./carousel-grid.css" ],
+    "category": "coventrycitycentre2026",
+    "icon": "slides",
+    "keywords": ["layout", "Coventry City Centre", "Carousel", "Grid"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "carousel-grid.php"
+    },
+    "align": "full"
+}

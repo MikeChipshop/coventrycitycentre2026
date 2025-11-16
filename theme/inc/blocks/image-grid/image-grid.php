@@ -1,0 +1,47 @@
+<?php
+    // Create id attribute allowing for custom "anchor" value.
+    $id = 'ccc26_block-' . $block['id'];
+    if( !empty($block['anchor']) ) {
+        $id = $block['anchor'];
+    }
+
+    // Create class attribute allowing for custom "className" and "align" values.
+    $className = 'ccc26_block';
+    if( !empty($block['className']) ) {
+        $className .= ' ' . $block['className'];
+    }
+    if( !empty($block['align']) ) {
+        $className .= ' align' . $block['align'];
+    }
+?>
+
+<section 
+    id="<?php echo esc_attr($id); ?>" 
+    class="<?php echo esc_attr($className); ?> ccc26_image-grid"     
+>
+    <div class="ccc26_wrap">
+        <ul>
+            <li>
+                <a href="#">
+                    <figure>
+                        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/nav-grid-2.jpg">
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <figure>
+                        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/nav-grid-2.jpg">
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <figure>
+                        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/nav-grid-2.jpg">
+                    </figure>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>

@@ -1,0 +1,16 @@
+{
+    "name": "acf/image-grid",
+    "title": "Image Grid",
+    "description": "A custom image grid block.",
+    "style": [ "file:./image-grid.css" ],
+    "category": "coventrycitycentre2026",
+    "icon": "images-alt2",
+    "keywords": ["layout", "Coventry City Centre", "Image", "Grid"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "image-grid.php"
+    },
+    "supports": {
+        "align": false
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "acf/navigation-grid",
+    "title": "Navigation Grid",
+    "description": "A custom navigation grid block.",
+    "style": [ "file:./navigation-grid.css" ],
+    "category": "coventrycitycentre2026",
+    "icon": "admin-links",
+    "keywords": ["layout", "Coventry City Centre", "Grid", "Navigation"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "navigation-grid.php"
+    },
+    "supports": {
+        "align": false
+    }
+}

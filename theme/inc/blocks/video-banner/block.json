@@ -1,0 +1,16 @@
+{
+    "name": "acf/video-banner",
+    "title": "Video Banner",
+    "description": "A custom video banner block.",
+    "style": [ "file:./video-banner.css" ],
+    "category": "coventrycitycentre2026",
+    "icon": "superhero-alt",
+    "keywords": ["layout", "Coventry City Centre", "Video", "Banner"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "video-banner.php"
+    },
+    "supports": {
+        "align": false
+    }
+}

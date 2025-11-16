@@ -30,6 +30,8 @@
 	gap:4px;
 	justify-content:center;
 	align-items: center;
+	padding:0px;
+	list-style-type: none;
 }
 .ccc26_search-cats ul li a {
 	padding: 12px 24px;
@@ -38,6 +40,7 @@
 	color: var(--color-light);
 	transition:all .3s ease;
 	display:block;
+	text-decoration: none;
 }
 .ccc26_search-cats ul li a:hover,
 .ccc26_search-cats ul li.active a {
@@ -88,4 +91,5 @@
 	align-items: center;
 	gap:64px;
 	line-height:1;
+	text-decoration: none;
 }

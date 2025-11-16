@@ -1,0 +1,16 @@
+{
+    "name": "acf/hero",
+    "title": "Hero",
+    "description": "A custom hero block.",
+    "style": [ "file:./hero.css" ],
+    "category": "coventrycitycentre2026",
+    "icon": "superhero-alt",
+    "keywords": ["layout", "Coventry City Centre", "hero"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "hero.php"
+    },
+    "supports": {
+        "align": false
+    }
+}

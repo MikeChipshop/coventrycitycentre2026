@@ -1,0 +1,112 @@
+/* ------------------------------------------------
+ Navigation Grid
+------------------------------------------------ */
+.ccc26_navigation-grid {
+	padding:40px 0px;
+}
+.ccc26_navigation-grid .ccc26_wrap {
+    display: flex;
+	gap:40px;
+}
+.ccc26_navigation-grid-column {
+    flex: 1;
+}
+.ccc26_navigation-grid-column:first-child figure {
+    aspect-ratio: 1 / 1;
+	position:relative;
+}
+.ccc26_navigation-grid-column nav a {
+	position:relative;
+	display:block;
+}
+.ccc26_navigation-grid-column:first-child figure img {
+    width:100%;
+	height:100%;
+	object-fit: cover;
+	display: block;
+	border-radius: 64px;
+}
+.ccc26_navigation-grid-column h2 {
+	padding-top:64px;
+	color:var(--color-pink);
+	font-family: "zuume", sans-serif;
+	font-weight: 700;
+	line-height:1;
+	padding-bottom:32px;
+	font-size:40px;
+	text-wrap:balance;
+ }
+ .ccc26_navigation-grid-column h3 {
+	color:var(--color-light);
+	font-family: "zuume", sans-serif;
+	font-weight: 700;
+	line-height:1;
+	max-width:140px;
+	width:100%;
+	font-size:40px;
+	text-wrap:balance;
+	position:absolute;
+	top:40px;
+	left:40px;
+	z-index:2;
+ }
+ .ccc26_navigation-grid-column p {
+	color:var(--color-deep-blue);
+	font-size:22px;
+	font-weight:700;
+}
+.ccc26_navigation-grid-column ul {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+	gap:40px;
+    margin:0px;
+    list-style-type: none;
+}
+.ccc26_navigation-grid-column nav a {
+    position: relative;
+    display: block;
+    height: 100%;
+	max-width:100%;
+}
+.ccc26_navigation-grid-column li:nth-of-type(1) {
+    grid-column: 1 / 8;
+}
+.ccc26_navigation-grid-column li:nth-of-type(3) {
+    grid-column: 1 / 17;
+}
+.ccc26_navigation-grid-column li:nth-of-type(2) {
+	grid-column: 9 / 17;
+}
+.ccc26_navigation-grid-column li:nth-of-type(4) {
+    grid-column: 1 / 10;
+}
+.ccc26_navigation-grid-column li:nth-of-type(5) {
+	grid-column: 10 / 17;
+}
+
+.ccc26_navigation-grid-column li:nth-of-type(1) a,
+.ccc26_navigation-grid-column li:nth-of-type(2) a,
+.ccc26_navigation-grid-column li:nth-of-type(5) a {
+	aspect-ratio: 10 / 8;
+}
+.ccc26_navigation-grid-column li:nth-of-type(4) a {
+	aspect-ratio: 10 / 8;
+}
+.ccc26_navigation-grid-column li:nth-of-type(1),
+.ccc26_navigation-grid-column li:nth-of-type(4) {
+	padding-bottom:55px;
+}
+.ccc26_navigation-grid-column li:nth-of-type(2),
+.ccc26_navigation-grid-column li:nth-of-type(5) {
+	padding-top:55px;
+}
+.ccc26_navigation-grid-column li:nth-of-type(3) a {
+	aspect-ratio: 8 / 4;
+}
+.ccc26_navigation-grid-column nav a img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+	border-radius: 64px;
+}

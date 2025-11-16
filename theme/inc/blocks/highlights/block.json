@@ -1,0 +1,16 @@
+{
+    "name": "acf/highlights",
+    "title": "Highlights",
+    "description": "A custom highlights block.",
+    "style": [ "file:./highlights.css" ],
+    "category": "coventrycitycentre2026",
+    "icon": "star-filled",
+    "keywords": ["layout", "Coventry City Centre", "highlights"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "highlights.php"
+    },
+    "supports": {
+        "align": false
+    }
+}

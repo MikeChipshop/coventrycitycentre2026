@@ -1,0 +1,30 @@
+/* ------------------------------------------------
+ POS Columns
+------------------------------------------------ */
+.ccc26_pos {
+    margin: 40px 0px;
+}
+.ccc26_wrap.ccc26_pos-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+	gap:16px;
+}
+.ccc26_pos-column {
+	padding: 64px 32px;
+}
+.ccc26_pos-column-wrap h2 {
+	font-size:52px;
+	font-weight: 700;
+	text-align:center;
+	text-wrap:balance;
+	line-height: 1.15;
+	padding-bottom:42px;
+}
+.ccc26_pos-column-wrap h2 span {
+	color:var(--color-yellow);
+	text-transform: uppercase;
+}
+.ccc26_pos-column-wrap h2 em {
+	text-transform: uppercase;
+	font-style: normal;
+}

@@ -1,0 +1,14 @@
+.ccc26_highlights .ccc26_wrap {
+    display: flex;
+}
+.ccc26_highlights-column {
+    flex: 1;
+}
+.ccc26_highlights-column h2 {
+    font-size: 32px;
+    font-family: "zuume", sans-serif;
+    font-weight: 700;
+    padding: 24px 0px;
+    line-height: 1;
+    color: var(--color-deep-blue);
+}

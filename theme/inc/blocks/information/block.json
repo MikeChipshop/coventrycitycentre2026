@@ -1,0 +1,16 @@
+{
+    "name": "acf/information",
+    "title": "Information",
+    "description": "A custom information block.",
+    "style": [ "file:./information.css" ],
+    "category": "coventrycitycentre2026",
+    "icon": "info-outline",
+    "keywords": ["layout", "Coventry City Centre", "information"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "information.php"
+    },
+    "supports": {
+        "align": false
+    }
+}

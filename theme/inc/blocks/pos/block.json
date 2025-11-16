@@ -1,0 +1,16 @@
+{
+    "name": "acf/pos",
+    "title": "POS",
+    "description": "A custom navigation grid block.",
+    "style": [ "file:./pos.css" ],
+    "category": "coventrycitycentre2026",
+    "icon": "flag",
+    "keywords": ["layout", "Coventry City Centre", "POS"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "pos.php"
+    },
+    "supports": {
+        "align": false
+    }
+}

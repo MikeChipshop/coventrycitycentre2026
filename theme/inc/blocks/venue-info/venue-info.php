@@ -1,18 +1,10 @@
-<?php
-    // Create id attribute allowing for custom "anchor" value.
+<?php    
     $id = 'ccc26_block-' . $block['id'];
-    if( !empty($block['anchor']) ) {
-        $id = $block['anchor'];
-    }
+    if( !empty($block['anchor']) ) :$id = $block['anchor']; endif;
 
     // Create class attribute allowing for custom "className" and "align" values.
     $className = 'ccc26_block';
-    if( !empty($block['className']) ) {
-        $className .= ' ' . $block['className'];
-    }
-    if( !empty($block['align']) ) {
-        $className .= ' align' . $block['align'];
-    }
+    if( !empty($block['className']) ) : $className .= ' ' . $block['className']; endif;
 ?>
 
 <section 

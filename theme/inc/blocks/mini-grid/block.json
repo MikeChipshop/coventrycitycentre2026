@@ -1,0 +1,16 @@
+{
+    "name": "acf/mini-grid",
+    "title": "Mini Grid",
+    "description": "A custom information block.",
+    "style": [ "file:./mini-grid.css" ],
+    "category": "coventrycitycentre2026",
+    "icon": "superhero-alt",
+    "keywords": ["layout", "Coventry City Centre", "Grid", "Mini"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "mini-grid.php"
+    },
+    "supports": {
+        "align": false
+    }
+}

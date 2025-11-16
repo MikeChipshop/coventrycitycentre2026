@@ -1,0 +1,16 @@
+{
+    "name": "acf/image-carousel",
+    "title": "Image Carousel",
+    "description": "A custom image carousel block.",
+    "style": [ "file:./image-carousel.css" ],
+    "category": "coventrycitycentre2026",
+    "icon": "buddicons-activity",
+    "keywords": ["layout", "Coventry City Centre", "Image", "Carousel"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "image-carousel.php"
+    },
+    "supports": {
+        "align": false
+    }
+}

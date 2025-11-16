@@ -1,0 +1,23 @@
+.ccc26_image-grid {
+    padding:40px 0px;
+}
+.ccc26_image-grid ul {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:40px;
+    list-style-type: none;
+    margin:0px;
+    padding:0px;
+}
+.ccc26_image-grid a {
+    text-decoration: none;
+}
+.ccc26_image-grid figure {
+    aspect-ratio: 1/1;
+}
+.ccc26_image-grid figure img {
+    display:block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

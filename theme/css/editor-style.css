@@ -51,10 +51,38 @@
 ------------------------------------------------ */
 .ccc26_carousel-grid-items ul {
 	list-style-type:none;
+	padding:0px;
 }
 .ccc26_carousel-grid h3 {
 	margin:0px;
 }
 .ccc26_carousel-grid-items a {
 	text-decoration:none;
+}
+
+/* ------------------------------------------------
+ Forms
+------------------------------------------------ */
+form input[type="text"], 
+form input[type="email"], 
+form textarea, 
+form select,
+form button {
+	padding:12px 24px;
+	border-radius:50px;
+	font-size:24px;
+	font-family: "zuume", sans-serif;
+	font-weight: 700;
+	background-color:var(--color-light);
+	color:var(--color-purple);
+	border:none;
+}
+form button {
+	font-size:32px;
+	padding:8px 24px;
+}
+form input::placeholder,
+form textarea::placeholder {
+  opacity: 0.3;
+  color: var(--color-purple);
 }

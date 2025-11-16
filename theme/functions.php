@@ -1,5 +1,5 @@
 <?php
-require_once( __DIR__ . '/inc/blocks.php');
+
 if ( ! function_exists( 'twentynineteen_setup' ) ) :
     function twentynineteen_setup() {
 
@@ -29,8 +29,13 @@ ENQUEUES
 *****************************************************/
 function dot_load_scripts() {
 
-    wp_register_script( 'site-common', get_template_directory_uri() . '/js/site-common.js', array('jquery'),'',true  );
+    wp_register_script( 'site-common', get_template_directory_uri() . '/js/site-common.js', array('jquery'),'',true  );	
+    wp_register_script( 'alpine', 'https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js', '','',array(
+            'in_footer' => true,
+            'strategy'  => 'defer',
+        )  );
 	wp_enqueue_script( 'site-common' );
+    wp_enqueue_script( 'alpine' );
 
 	wp_register_style( 'main-css', get_template_directory_uri() . '/style.css?v=1','','', 'screen' );
 	wp_register_style( 'font-proxima-nova', 'https://use.typekit.net/fgj5ohh.css','','', 'screen' );
@@ -45,6 +50,11 @@ add_action('wp_enqueue_scripts', 'dot_load_scripts');
 function dot_block_styles() {
 	wp_enqueue_style( 'acf-font', get_template_directory_uri() . '/css/acf-styles.css');
 	wp_enqueue_style( 'font-proxima-nova', 'https://use.typekit.net/fgj5ohh.css');
+
+    wp_enqueue_script( 'alpine', 'https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js', '','',array(
+            'in_footer' => true,
+            'strategy'  => 'defer',
+        )  );
 }
 add_action( 'enqueue_block_editor_assets', 'dot_block_styles' );
 
@@ -189,4 +199,33 @@ function acf_add_allowed_svg_tag( $tags, $context ) {
     }
 
     return $tags;
+}
+
+function ccc26_block_category( $categories, $post ) {
+	return array_merge(
+		$categories,
+		array(
+			array(
+				'slug' => 'coventrycitycentre2026',
+				'title' => __( 'Coventry City Centre 2026', 'coventrycitycentre2026' ),
+			),
+		)
+	);
+}
+add_filter( 'block_categories_all', 'ccc26_block_category', 10, 2);
+
+add_action( 'init', 'register_acf_blocks', 5 );
+function register_acf_blocks() {
+    register_block_type( __DIR__ . '/inc/blocks/carousel-grid' );
+    register_block_type( __DIR__ . '/inc/blocks/hero' );
+    register_block_type( __DIR__ . '/inc/blocks/highlights' );
+    register_block_type( __DIR__ . '/inc/blocks/image-carousel' );
+    register_block_type( __DIR__ . '/inc/blocks/image-grid' );
+    register_block_type( __DIR__ . '/inc/blocks/information' );
+    register_block_type( __DIR__ . '/inc/blocks/mini-grid' );
+    register_block_type( __DIR__ . '/inc/blocks/navigation-grid' );
+    register_block_type( __DIR__ . '/inc/blocks/pos' );
+    register_block_type( __DIR__ . '/inc/blocks/search' );
+    register_block_type( __DIR__ . '/inc/blocks/venue-info' );
+    register_block_type( __DIR__ . '/inc/blocks/video-banner' );
 }
