@@ -7,10 +7,12 @@
     "icon": "flag",
     "keywords": ["layout", "Coventry City Centre", "POS"],
     "acf": {
+        "blockVersion": 3,
         "mode": "preview",
         "renderTemplate": "pos.php"
     },
     "supports": {
         "align": false
-    }
+    },
+    "example": {}
 }

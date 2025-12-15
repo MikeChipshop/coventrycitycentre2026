@@ -7,10 +7,12 @@
     "icon": "star-filled",
     "keywords": ["layout", "Coventry City Centre", "highlights"],
     "acf": {
+        "blockVersion": 3,
         "mode": "preview",
         "renderTemplate": "highlights.php"
     },
     "supports": {
         "align": false
-    }
+    },
+    "example": {}
 }

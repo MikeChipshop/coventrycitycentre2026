@@ -7,8 +7,12 @@
     "icon": "slides",
     "keywords": ["layout", "Coventry City Centre", "Carousel", "Grid"],
     "acf": {
+        "blockVersion": 3,
         "mode": "preview",
         "renderTemplate": "carousel-grid.php"
     },
-    "align": "full"
+    "supports": {
+        "align": false
+    },
+    "example": {}
 }

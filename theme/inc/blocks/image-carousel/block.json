@@ -7,10 +7,12 @@
     "icon": "buddicons-activity",
     "keywords": ["layout", "Coventry City Centre", "Image", "Carousel"],
     "acf": {
+        "blockVersion": 3,
         "mode": "preview",
         "renderTemplate": "image-carousel.php"
     },
     "supports": {
         "align": false
-    }
+    },
+    "example": {}
 }

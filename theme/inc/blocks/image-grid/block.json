@@ -7,10 +7,12 @@
     "icon": "images-alt2",
     "keywords": ["layout", "Coventry City Centre", "Image", "Grid"],
     "acf": {
+        "blockVersion": 3,
         "mode": "preview",
         "renderTemplate": "image-grid.php"
     },
     "supports": {
         "align": false
-    }
+    },
+    "example": {}
 }

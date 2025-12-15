@@ -7,10 +7,12 @@
     "icon": "superhero-alt",
     "keywords": ["layout", "Coventry City Centre", "Video", "Banner"],
     "acf": {
+        "blockVersion": 3,
         "mode": "preview",
         "renderTemplate": "video-banner.php"
     },
     "supports": {
         "align": false
-    }
+    },
+    "example": {}
 }

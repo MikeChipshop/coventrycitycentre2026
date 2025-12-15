@@ -7,10 +7,12 @@
     "icon": "superhero-alt",
     "keywords": ["layout", "Coventry City Centre", "Grid", "Mini"],
     "acf": {
+        "blockVersion": 3,
         "mode": "preview",
         "renderTemplate": "mini-grid.php"
     },
     "supports": {
         "align": false
-    }
+    },
+    "example": {}
 }

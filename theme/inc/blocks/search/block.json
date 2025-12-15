@@ -7,10 +7,12 @@
     "icon": "search",
     "keywords": ["layout", "Coventry City Centre", "Search"],
     "acf": {
+        "blockVersion": 3,
         "mode": "preview",
         "renderTemplate": "search.php"
     },
     "supports": {
         "align": false
-    }
+    },
+    "example": {}
 }

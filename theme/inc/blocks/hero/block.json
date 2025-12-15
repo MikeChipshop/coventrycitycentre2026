@@ -7,10 +7,12 @@
     "icon": "superhero-alt",
     "keywords": ["layout", "Coventry City Centre", "hero"],
     "acf": {
+        "blockVersion": 3,
         "mode": "preview",
         "renderTemplate": "hero.php"
     },
     "supports": {
         "align": false
-    }
+    },
+    "example": {}
 }

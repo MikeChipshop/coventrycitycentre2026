@@ -7,10 +7,12 @@
     "icon": "admin-links",
     "keywords": ["layout", "Coventry City Centre", "Grid", "Navigation"],
     "acf": {
+        "blockVersion": 3,
         "mode": "preview",
         "renderTemplate": "navigation-grid.php"
     },
     "supports": {
         "align": false
-    }
+    },
+    "example": {}
 }

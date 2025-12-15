@@ -7,11 +7,13 @@
     "icon": "admin-multisite",
     "keywords": ["layout", "Coventry City Centre", "Venue", "Information"],
     "acf": {
+        "blockVersion": 3,
         "mode": "preview",
         "renderTemplate": "venue-info.php"
     },
     "supports": {
         "align": false,
         "jsx": false
-    }
+    },
+    "example": {}
 }

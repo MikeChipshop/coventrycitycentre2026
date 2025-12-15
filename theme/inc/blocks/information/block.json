@@ -7,10 +7,12 @@
     "icon": "info-outline",
     "keywords": ["layout", "Coventry City Centre", "information"],
     "acf": {
+        "blockVersion": 3,
         "mode": "preview",
         "renderTemplate": "information.php"
     },
     "supports": {
         "align": false
-    }
+    },
+    "example": {}
 }
