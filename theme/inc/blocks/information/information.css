@@ -1,9 +1,16 @@
 
 .ccc26_information-top {
     display: flex;
+    gap:4%;
 }
 .ccc26_information-column {
     flex: 1;
+    font-size:18px;
+    color:var(--color-deep-blue);
+    font-weight:500;
+}
+.ccc26_information-column strong {
+    font-weight:800;
 }
 .ccc26_information-column h2 {
     font-size: 32px;

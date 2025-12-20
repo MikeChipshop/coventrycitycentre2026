@@ -38,29 +38,6 @@
 	display:block;
 	object-fit:cover;
 }
-.ccc26_carousel-grid figure button {
-    position: absolute;
-    bottom: 16px;
-    right: 16px;
-    background-color: var(--color-light);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-	margin:none;
-	padding:none;
-	border:none;
-	cursor:pointer;
-}
-.ccc26_carousel-grid figure button svg path {	
-	fill: #ccc;
-	transition: fill .3s ease;
-}
-.ccc26_carousel-grid figure button:hover svg path {	
-	fill: var(--color-pink);
-}
 .ccc26_carousel-grid h3 {
 	font-size:32px;
 	font-family: "zuume", sans-serif;

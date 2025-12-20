@@ -3,7 +3,7 @@
     grid-template-columns: repeat(16, 1fr);
 }
 .ccc26_venue-column.gallery {
-    grid-column:1 / 8;
+    grid-column:1 / 7;
 }
 .ccc26_venue-column.gallery figure {
     aspect-ratio:1/1;
@@ -31,7 +31,7 @@
     border-radius:32px;
 }
 .ccc26_venue-column.content {
-    grid-column:9 / 17;
+    grid-column:8 / 17;
 }
 .ccc26_venue-column h2 {
     color: var(--color-pink);
@@ -48,15 +48,18 @@
 .ccc26_venue-details {
     padding-top: 40px;
 }
-.ccc26_venue-column h3:before {
-    content:">";
-    display:inline-block;
-    color: var(--color-pink);
-    font-family: "zuume", sans-serif;
-    font-weight: 700;
-    line-height: .1;
-    font-size: 68px;
-    padding-right: 8px;
+.ccc26_details-chevron svg {
+    width:22px;
+    transition:rotate .3s ease-in-out;
+}
+.active .ccc26_details-chevron svg {
+    rotate:90deg;
+}
+.ccc26_details-chevron svg path {
+    fill: var(--color-pink);
+}
+.ccc26_details-title {
+    padding-left:20px;
 }
 .ccc26_venue-column h3 {
     color: var(--color-deep-blue);
@@ -69,6 +72,12 @@
     display:flex;
     align-items: center;
     margin:0px;
+    cursor:pointer;
+    transition:color .3s ease-in-out;
+}
+.ccc26_venue-column h3:hover,
+.ccc26_venue-column h3.active {
+    color:var(--color-pink);
 }
 .ccc26_venue-detail-content {
     display:grid;
@@ -86,7 +95,7 @@
     overflow:hidden;
 }
 .ccc26_venue-detail-content-container {
-    padding:0px 16px 32px 32px;
+    padding:0px 16px 32px 42px;
 }
 .ccc26_venue-details ul {
     margin:0px;

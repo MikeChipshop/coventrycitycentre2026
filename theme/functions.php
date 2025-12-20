@@ -27,6 +27,7 @@ if ( function_exists( 'add_image_size' ) ) {
 /****************************************************
 ENQUEUES
 *****************************************************/
+
 function dot_load_scripts() {
 
     wp_register_script( 'site-common', get_template_directory_uri() . '/js/site-common.js', array('jquery'),'',true  );	
@@ -34,6 +35,7 @@ function dot_load_scripts() {
             'in_footer' => true,
             'strategy'  => 'defer',
         )  );
+    
 	wp_enqueue_script( 'site-common' );
     wp_enqueue_script( 'alpine' );
 
@@ -228,4 +230,99 @@ function register_acf_blocks() {
     register_block_type( __DIR__ . '/inc/blocks/search' );
     register_block_type( __DIR__ . '/inc/blocks/venue-info' );
     register_block_type( __DIR__ . '/inc/blocks/video-banner' );
+}
+
+/***************************************************
+/ Directory Type
+/***************************************************/
+
+add_action( 'init', 'register_cpt_directory' );
+
+function register_cpt_directory() {
+
+    $labels = array(
+        'name' => _x( 'Directory', 'directory' ),
+        'singular_name' => _x( 'Directory', 'directory' ),
+        'add_new' => _x( 'Add New', 'directory' ),
+        'add_new_item' => _x( 'Add New', 'directory' ),
+        'edit_item' => _x( 'Edit', 'directory' ),
+        'new_item' => _x( 'New', 'directory' ),
+        'view_item' => _x( 'View', 'directory' ),
+        'search_items' => _x( 'Search', 'directory' ),
+        'not_found' => _x( 'None found', 'directory' ),
+        'not_found_in_trash' => _x( 'None found in bin', 'directory' ),
+        'parent_item_colon' => _x( 'Parent:', 'directory' ),
+        'menu_name' => _x( 'Directory', 'directory' ),
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'hierarchical' => true,
+        'description' => 'Post type for directory items',
+        'supports' => array( 'title', 'editor', 'thumbnail', 'revisions','excerpt', 'author' ),
+        'taxonomies' => array(),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 20,
+        'show_in_nav_menus' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => true,
+        'has_archive' => true,
+        'query_var' => true,
+        'can_export' => true,
+		'menu_icon' => 'book',
+		'capability_type' => 'post',
+		'show_in_rest' => true
+    );
+
+    register_post_type( 'directory', $args );
+}
+
+// Custom Taxonomy: Section
+add_action( 'init', 'create_section_taxonomy', 0 );
+function create_section_taxonomy() {
+
+    $labels = array(
+        'name'               => _x( 'Section', 'taxonomy general name' ),
+        'singular_name'      => _x( 'Section', 'taxonomy singular name' ),
+        'search_items'       => __( 'Search Sections' ),
+        'all_items'          => __( 'All Sections' ),
+        'parent_item'        => __( 'Parent Section' ),
+        'parent_item_colon'  => __( 'Parent Section:' ),
+        'edit_item'          => __( 'Edit Section' ),
+        'update_item'        => __( 'Update Section' ),
+        'add_new_item'       => __( 'Add New Section' ),
+        'new_item_name'      => __( 'New Section Name' ),
+        'menu_name'          => __( 'Sections' ),
+    );  
+
+    register_taxonomy( 'section', array( 'directory' ), array(
+        'hierarchical'       => true,
+        'labels'             => $labels,
+        'show_ui'            => true,
+        'show_admin_column'  => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'section' ),
+        'show_in_rest'       => true,
+    ) );
+}
+
+add_action('init','random_add_rewrite');
+function random_add_rewrite() {
+   global $wp;
+   $wp->add_query_var('random');
+   add_rewrite_rule('random/?$', 'index.php?random=1', 'top');
+}
+
+add_action('template_redirect','random_template');
+function random_template() {
+   if (get_query_var('random') == 1) {
+           $posts = get_posts('post_type=directory&orderby=rand&numberposts=1');
+           foreach($posts as $post) {
+                   $link = get_permalink($post);
+           }
+           wp_redirect($link,307);
+           exit;
+   }
 }

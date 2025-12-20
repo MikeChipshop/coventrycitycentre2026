@@ -14,7 +14,8 @@
 .ccc26_mini-grid figure {
     aspect-ratio:1/1;
     overflow:hidden;
-    border-radius: 50px;
+    border-radius: 32px;
+    position:relative;
 }
 .ccc26_mini-grid img {
     display:block;
@@ -33,6 +34,10 @@
     padding-top: 16px;
     margin:0px;
 }
+.ccc26_mini-grid h2 a {
+    text-decoration: none;
+    color: var(--color-pink);
+}
 .ccc26_mini-grid ul div {
     color: var(--color-deep-blue);
     font-family: "zuume", sans-serif;
@@ -41,4 +46,7 @@
     text-decoration:none;
     padding-top:8px;
     padding-left: 32px;
+}
+.ccc26_mini-grid ul div a {
+    color: var(--color-deep-blue);
 }

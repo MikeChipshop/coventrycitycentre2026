@@ -1,5 +1,7 @@
 .ccc26_highlights .ccc26_wrap {
     display: flex;
+    gap: 5%;
+    padding: 64px 16px;
 }
 .ccc26_highlights-column {
     flex: 1;
@@ -8,7 +10,62 @@
     font-size: 32px;
     font-family: "zuume", sans-serif;
     font-weight: 700;
-    padding: 24px 0px;
+    padding: 0px 0px 12px 0px;
     line-height: 1;
     color: var(--color-deep-blue);
+    display: flex;
+    align-items: center;
+}
+.ccc26_title-icon {
+    padding:4px 8px 0px 0px;
+}
+.ccc26_title-icon svg {
+    height: 40px;
+    width: auto;
+}
+.ccc26_title-icon svg path {
+    fill: var(--color-deep-blue);
+}
+.ccc26_highlights-column p {
+    color: var(--color-deep-blue);
+    padding-left: 48px;
+    font-size:18px;
+    font-weight:500;
+}
+
+/* Highlight Colors */
+
+.ccc26_highlights-column.highlight-yellow h2 {
+    color: var(--color-yellow);
+}
+.highlight-yellow .ccc26_title-icon svg path {
+    fill: var(--color-yellow);
+}
+
+.ccc26_highlights-column.highlight-pink h2 {
+    color: var(--color-pink);
+}
+.highlight-pink .ccc26_title-icon svg path {
+    fill: var(--color-pink);
+}
+
+.ccc26_highlights-column.highlight-purple h2 {
+    color: var(--color-purple);
+}
+.highlight-purple .ccc26_title-icon svg path {
+    fill: var(--color-purple);
+}
+
+.ccc26_highlights-column.highlight-lblue h2 {
+    color: var(--color-light-blue);
+}
+.highlight-lblue .ccc26_title-icon svg path {
+    fill: var(--color-light-blue);
+}
+
+.ccc26_highlights-column.highlight-blue h2 {
+    color: var(--color-deep-blue);
+}
+.highlight-blue .ccc26_title-icon svg path {
+    fill: var(--color-deep-blue);
 }

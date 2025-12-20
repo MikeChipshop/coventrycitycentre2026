@@ -32,8 +32,9 @@
         <div class="ccc26_venue-column content">
             <h2>Forme &amp; Chase Restaurant &amp; Bar</h2>
             <div class="ccc26_venue-content">
-                <p><strong>Phasellus pretium nisl mauris, malesuada tempus nulla consectetur sed. Nulla bibendum augue lorem, in volutpat metus pretium ut.</strong></p>
-                <p>In faucibus diam risus, et rutrum augue dapibus nec. Proin elementum tellus at enim consectetur lacinia. Ut porttitor volutpat ex, non porttitor leo commodo quis. Aenean condimentum, tortor scelerisque aliquam consequat, lectus nisi tincidunt ipsum, ut interdum enim urna ut odio. Ut auctor nisl id convallis venenatis. Duis aliquam nulla mauris, non dapibus elit tristique vitae. Integer porta vitae mauris ac convallis. Aliquam a risus sit amet nunc facilisis ultrices. Curabitur commodo varius justo, at vulputate nisi pretium at. Fusce commodo, urna ut scelerisque ultrices, risus ante interdum odio, non sodales tortor velit eget risus. Donec dapibus, turpis pellentesque pretium semper, ipsum arcu varius lectus, id egestas lorem justo at enim.</p>
+                <p><strong>Cuisine: Restaurant & Bar</strong></p>
+                <p>In the old days of journalism, some of the best scoops were cooked up over a working breakfast, a liquid lunch or an after-work drink. Forme & Chase is open all day – so you’ll have plenty of opportunity to relax here and make some stories of your own. The time you discovered our to-die-for menu. The old friends you met, and the new friends you made over Paparazzi cocktails at the bar. The deal you sealed with a special lunch. That romantic dinner à deux that changed your life.</p>
+                <p>Bar snacks, light lunch, dinner & afternoon teas.</p>
             </div>
             <div class="ccc26_venue-details">
                 <ul>
@@ -41,8 +42,16 @@
                         <h3 
                             id="ccc26_details-title-01"
                             @click="expanded = !expanded"
+                            :class="{ 'active': expanded }"
                         >
-                            Opening Times
+                            <div class="ccc26_details-chevron">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.3 13.86">
+                                    <path d="M.03,12.23c-.15-1.46.34-1.99,1.29-2.46l5.82-2.87L1.16,4.05C.26,3.73-.01,2.91,0,1.91.05,1.25.23.55.75.2c.41-.28,1.22-.26,1.76,0l10.5,5.04c.34,1.04.46,2.42-.07,3.35L2.17,13.78c-.38.18-1.22,0-1.49-.17-.31-.2-.61-.88-.66-1.37Z"/>
+                                </svg>
+                            </div>
+                            <div class="ccc26_details-title">
+                                Opening Times
+                            </div>
                         </h3>
                         <div id="ccc26_details-content-01" class="ccc26_venue-detail-content" :class="expanded ? 'expanded' : 'collapsed'">
                             <div>
@@ -56,8 +65,16 @@
                         <h3 
                             id="ccc26_details-title-02"
                             @click="expanded = !expanded"
+                            :class="{ 'active': expanded }"
                         >
-                            Contact
+                            <div class="ccc26_details-chevron">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.3 13.86">
+                                    <path d="M.03,12.23c-.15-1.46.34-1.99,1.29-2.46l5.82-2.87L1.16,4.05C.26,3.73-.01,2.91,0,1.91.05,1.25.23.55.75.2c.41-.28,1.22-.26,1.76,0l10.5,5.04c.34,1.04.46,2.42-.07,3.35L2.17,13.78c-.38.18-1.22,0-1.49-.17-.31-.2-.61-.88-.66-1.37Z"/>
+                                </svg>
+                            </div>
+                            <div class="ccc26_details-title">
+                                Contact
+                            </div>
                         </h3>
                         <div id="ccc26_details-content-02" class="ccc26_venue-detail-content" :class="expanded ? 'expanded' : 'collapsed'">
                             <div>
@@ -71,8 +88,16 @@
                         <h3
                             id="ccc26_details-title-03"
                             @click="expanded = !expanded"
+                            :class="{ 'active': expanded }"
                         >
-                            How to get there
+                            <div class="ccc26_details-chevron">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.3 13.86">
+                                    <path d="M.03,12.23c-.15-1.46.34-1.99,1.29-2.46l5.82-2.87L1.16,4.05C.26,3.73-.01,2.91,0,1.91.05,1.25.23.55.75.2c.41-.28,1.22-.26,1.76,0l10.5,5.04c.34,1.04.46,2.42-.07,3.35L2.17,13.78c-.38.18-1.22,0-1.49-.17-.31-.2-.61-.88-.66-1.37Z"/>
+                                </svg>
+                            </div>
+                            <div class="ccc26_details-title">
+                                How to get there
+                            </div>
                         </h3>
                         <div id="ccc26_details-content-03" class="ccc26_venue-detail-content" :class="expanded ? 'expanded' : 'collapsed'">
                             <div>
@@ -86,8 +111,16 @@
                         <h3
                             id="ccc26_details-title-04"
                             @click="expanded = !expanded"
+                            :class="{ 'active': expanded }"
                         >
-                            Accessibility Information
+                            <div class="ccc26_details-chevron">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.3 13.86">
+                                    <path d="M.03,12.23c-.15-1.46.34-1.99,1.29-2.46l5.82-2.87L1.16,4.05C.26,3.73-.01,2.91,0,1.91.05,1.25.23.55.75.2c.41-.28,1.22-.26,1.76,0l10.5,5.04c.34,1.04.46,2.42-.07,3.35L2.17,13.78c-.38.18-1.22,0-1.49-.17-.31-.2-.61-.88-.66-1.37Z"/>
+                                </svg>
+                            </div>
+                            <div class="ccc26_details-title">
+                                Accessibility Information
+                            </div>
                         </h3>
                         <div id="ccc26_details-content-04" class="ccc26_venue-detail-content" :class="expanded ? 'expanded' : 'collapsed'">
                             <div>
