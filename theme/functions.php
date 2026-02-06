@@ -260,7 +260,7 @@ function register_cpt_directory() {
         'hierarchical' => true,
         'description' => 'Post type for directory items',
         'supports' => array( 'title', 'editor', 'thumbnail', 'revisions','excerpt', 'author' ),
-        'taxonomies' => array(),
+        'taxonomies' => array('post_tag'),
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
@@ -326,3 +326,12 @@ function random_template() {
            exit;
    }
 }
+add_action('acf/input/admin_footer', function (): void {
+    echo <<<HTML
+    <script>
+        acf.addFilter('acf_blocks_parse_node_attr', (currentValue, nodeAttr) => {
+            return /^(x-|:|@)/.test(nodeAttr.name) ? nodeAttr : currentValue;
+        });
+    </script>
+    HTML;
+});

@@ -1,6 +1,7 @@
 .ccc26_venue-info .ccc26_wrap {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
+    padding:64px 16px;
 }
 .ccc26_venue-column.gallery {
     grid-column:1 / 7;
@@ -97,8 +98,102 @@
 .ccc26_venue-detail-content-container {
     padding:0px 16px 32px 42px;
 }
+.ccc26_venue-detail-content-container p:not(:last-of-type) {
+    padding-bottom:16px;
+}
 .ccc26_venue-details ul {
     margin:0px;
     list-style-type: none;
     padding-left:0px;
+}
+.ccc26_opening-hours-note {
+    border: 1px solid #000;
+    padding: 16px;
+    margin-top: 16px;
+}
+.ccc26_venue-location-parking {
+    padding-top: 16px;
+}
+.ccc26_venue-location-parking a {
+    border-radius: 100px;
+    border: 1px solid var(--color-pink);
+    padding: 4px 8px;
+    display: inline-block;
+    font-size: 14px;
+    color: var(--color-light);
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    text-align:center;
+    background-color: var(--color-pink);
+}
+.ccc26_venue-location-parking a:hover {
+    background-color: var(--color-deep-blue);
+    border-color: var(--color-deep-blue);  
+}
+.ccc26_venue-location-nearby {
+    padding-top: 16px;
+}
+.ccc26_venue-location-nearby ul {
+    display: flex;
+    gap: 8px;
+}
+.ccc26_venue-location-nearby li a {
+    border-radius: 16px;
+    border: 1px solid var(--color-pink);
+    padding: 4px 8px;
+    display: block;
+    font-size: 14px;
+    color: var(--color-light);
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    text-align:center;
+    background-color: var(--color-pink);
+}
+.ccc26_venue-location-nearby li a:hover {
+    background-color: var(--color-deep-blue);
+    border-color: var(--color-deep-blue);   
+}
+.ccc26_venue-location-nearby h4,
+.ccc26_venue-location-parking h4 {
+    font-family: "zuume", sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    padding-bottom: 8px;
+    font-size: 22px;
+    text-wrap: balance;
+}
+.ccc26_venue-detail-content-container iframe {
+    margin-top:32px;
+}
+.ccc26_venue-detail-content-container.contact a {
+    color:var(--color-pink);
+    text-decoration: none;
+}
+.ccc26_venue-detail-content-container.contact a:hover{
+    text-decoration: underline;
+}
+.ccc26_venue-content > ul {
+    list-style-type: disc;
+    padding: 0px;
+    margin: 0px;
+    padding-left: 20px;
+}
+
+/* Opening Hours */
+.ccc26_opening-hours-list {
+    margin:0;
+}
+.ccc26_opening-hours-list li {
+    display:flex;
+}
+.ccc26_opening-hours-list li .label,
+.ccc26_opening-hours-list li .times {
+    flex: 1;
+}
+.ccc26_opening-hours-list li .label {
+    text-transform:capitalize;
+}
+.ccc26_opening-hours-list li .times span:last-child::before {
+    content: "-";
+    padding-right:4px;
 }
