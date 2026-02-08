@@ -26,7 +26,7 @@
                     </ul>
                 </nav>
             </div>
-            <div class="ccc26_global-footer-column">
+            <div class="ccc26_global-footer-column logo">
                 <a href="https://coventrybid.co.uk" target="_blank">
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/coventryBID-footer.png" alt="Visit Coventry BID">
                 </a>

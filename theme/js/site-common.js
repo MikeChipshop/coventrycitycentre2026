@@ -88,7 +88,8 @@ function loadFavPosts(options = {}) {
         container = "#fav-posts",
         postType = "posts",
         fields = ["id", "title", "excerpt", "link"],
-        emptyMessage = "<p>No favourites yet.</p>"
+        emptyMessage = "<p>No favourites yet.</p>",
+        fallbackImage = "https://2026.coventrycitycentre.co.uk/wp-content/themes/coventrycitycentre2026/img/placeholder.png"
     } = options;
 
     const favList = JSON.parse(localStorage.getItem("favelist")) || { ids: [] };
@@ -103,7 +104,7 @@ function loadFavPosts(options = {}) {
         return;
     }
 
-    const url = `/wp-json/wp/v2/${postType}?include=${ids.join(",")}&orderby=include`;
+    const url = `/wp-json/wp/v2/${postType}?include=${ids.join(",")}&orderby=include&_embed=wp:featuredmedia`;
 
     fetch(url)
         .then(res => res.json())
@@ -175,11 +176,21 @@ function loadFavPosts(options = {}) {
                 
                 posts.forEach(post => {
                     if (!existingIds.has(String(post.id))) {
+                        // Get thumbnail URL with fallback
+                        let thumbnailUrl = fallbackImage;
+
+                        if (post._embedded && 
+                            post._embedded['wp:featuredmedia'] && 
+                            post._embedded['wp:featuredmedia'][0] &&
+                            post._embedded['wp:featuredmedia'][0].source_url) {
+                            thumbnailUrl = post._embedded['wp:featuredmedia'][0].source_url;
+                        }
+
                         const html = `
                             <li class="fav-post" data-id="${post.id}">
                                 <figure>
                                     <a href="${post.link}">
-                                        <img src="https://2026.coventrycitycentre.co.uk/wp-content/themes/coventrycitycentre2026/img/carousel-1.jpg">
+                                        <img src="${thumbnailUrl}" alt="${post.title.rendered}">
                                     </a>
                                     <button class="ccc26_favourite-button ccc26_toggle-favourite is-fav" data-id="${post.id}">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
