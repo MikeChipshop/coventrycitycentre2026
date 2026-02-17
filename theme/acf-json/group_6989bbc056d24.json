@@ -1,0 +1,113 @@
+{
+    "key": "group_6989bbc056d24",
+    "title": "Video Banner",
+    "fields": [
+        {
+            "key": "field_6989bbc0d0d09",
+            "label": "Video Type",
+            "name": "video_type",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yt": "YouTube",
+                "upload": "Upload"
+            },
+            "default_value": "yt",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_6989bc47d0d0a",
+            "label": "YouTube ID",
+            "name": "youtube_url",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6989bbc0d0d09",
+                        "operator": "==",
+                        "value": "yt"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6989bcbcd0d0b",
+            "label": "Uploaded Video",
+            "name": "uploaded_video",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6989bbc0d0d09",
+                        "operator": "==",
+                        "value": "upload"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/video-banner"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "modified": 1770635686
+}

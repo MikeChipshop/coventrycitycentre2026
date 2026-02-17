@@ -22,8 +22,8 @@ jQuery(document).ready(function( $ ) {
 
 const favOptions = {
     container: "#fav-items",
-    postType: "pages",
-    emptyMessage: "<h2>Hey, You don't have any favourites yet!</h2><p>You haven't saved anything yet. Where ever you see a heart button around the website, you can click this and save a list of your favourite items for exploring later.</p>"
+    postType: "directory",
+    emptyMessage: "<div><h2>Hey, You don't have any favourites yet!</h2><p>You haven't saved anything yet. Where ever you see a heart button around the website, you can click this and save a list of your favourite items for exploring later.</p></div>"
 };
 
 

@@ -13,6 +13,17 @@
     if( !empty($block['align']) ) {
         $className .= ' align' . $block['align'];
     }
+
+    $image = get_field('main_image');
+    $imageTitle = get_field('main_image_title');
+    $imageLink = get_field('main_image_link');
+    $Title = get_field('main_title');
+    $content = get_field('main_content');
+
+    $attachment_id = get_field('main_image');
+    $size = "full";
+    $image = wp_get_attachment_image_src( $attachment_id, $size ); 
+
 ?>
 
 <section 
@@ -22,49 +33,37 @@
    <div class="ccc26_wrap">
         <div class="ccc26_navigation-grid-column">
             <figure>
-                <img src="<?php bloginfo('stylesheet_directory'); ?>/img/nav-grid-1.jpg" alt="Navigation Image">
-                <h3>What's on</h3>
+                <img src="<?php echo $image[0]; ?>" alt="<?php echo $imageTitle; ?>">
+                <?php if($imageTitle): ?><h3><?php echo $imageTitle; ?></h3><?php endif; ?>
             </figure>
             <div class="ccc26_navigation-grid-content">
-                <h2>Welcome to Coventry, a city rich in culture and history.</h2>
-                <p>Thousands of people visit Coventry every year to experience our unique and exciting city. With a wide variety to see and do, we have handpicked some of the best for you.</p>
+                <?php if($Title): ?><h2><?php echo $Title; ?></h2><?php endif; ?>
+                <?php if($content): ?><p><?php echo $content; ?></p><?php endif; ?>
             </div>
         </div>
         <div class="ccc26_navigation-grid-column">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/nav-grid-2.jpg">
-                            <h3>Shop 'till you drop</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/nav-grid-3.jpg">
-                            <h3>Eating out</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/nav-grid-4.jpg">
-                            <h3>Heritage in Coventry</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/nav-grid-5.jpg">
-                            <h3>Staying over</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/nav-grid-6.jpg">
-                            <h3>Things to do</h3>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <?php if( have_rows('grid_items') ): ?>
+                <nav>
+                    <ul>
+                        <?php while( have_rows('grid_items') ) : the_row(); ?>
+                            <?php
+                                $gridTitle = get_sub_field('grid_items_image_title');
+                                $gridLink = get_sub_field('grid_items_link');
+
+                                $attachment_id = get_sub_field('grid_items_image');
+                                $size = "full";
+                                $image = wp_get_attachment_image_src( $attachment_id, $size ); 
+                            ?>
+                            <li>
+                                <a href="<?php echo $gridLink; ?>">
+                                    <img src="<?php echo $image[0]; ?>" alt="<?php echo $gridTitle; ?>">
+                                    <?php if($gridTitle): ?><h3><?php echo $gridTitle; ?></h3><?php endif; ?>
+                                </a>
+                            </li>
+                        <?php endwhile; ?>
+                    </ul>
+                </nav>
+            <?php endif; ?>
         </div>
     </div>
 </section>

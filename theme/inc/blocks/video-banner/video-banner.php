@@ -19,5 +19,17 @@
     id="<?php echo esc_attr($id); ?>" 
     class="<?php echo esc_attr($className); ?> ccc26_video-banner"     
 >
-    Video Banner
+    <div class="ccc26_wrap">
+        <?php if( get_field('video_type') === 'yt') : ?>
+            <?php $youTubeURL = get_field('youtube_url'); ?>
+            <div class="ccc26_video-embed">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $youTubeURL; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        <?php else: ?>
+            <video autoplay muted loop>
+                <source src="<?php the_field('video_url'); ?>" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        <?php endif; ?>
+    </div>
 </section>

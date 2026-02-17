@@ -21,6 +21,9 @@
 .ccc26_search-cats {
 	padding-bottom:30px;
 }
+.ccc26_search-cats-check {
+    padding-bottom: 32px;
+}
 .ccc26_search-cats ul {
     display: flex;
 	font-size:24px;

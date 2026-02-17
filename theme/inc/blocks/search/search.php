@@ -28,16 +28,16 @@
         </header>
         <div class="ccc26_search-cats-check">
             <ul>
-                <li><input type="checkbox" id="all" name="all" checked /><label for="all">What's On</label></li>
-                <li><input type="checkbox" id="whatson" name="whatson" checked /><label for="whatson">What's On</label></li>
-                <li><input type="checkbox" id="shop" name="shop" checked /><label for="shop">Shop 'till you drop</label></li>
-                <li><input type="checkbox" id="dine" name="dine" checked /><label for="dine">Eating out</label></li>
-                <li><input type="checkbox" id="staying" name="staying" checked /><label for="staying">Staying over</label></li>
-                <li><input type="checkbox" id="todo" name="todo" checked /><label for="todo">Things to do</label></li>
-                <li><input type="checkbox" id="heritage" name="heritage" checked /><label for="heritage">Heritage in Coventry</label></li>
+                <li><input type="checkbox" id="all" name="all" checked /><label for="all">All</label></li>
+                <li><input type="checkbox" id="whatson" name="whatson" /><label for="whatson">What's On</label></li>
+                <li><input type="checkbox" id="shop" name="shop" /><label for="shop">Shop 'till you drop</label></li>
+                <li><input type="checkbox" id="dine" name="dine" /><label for="dine">Eating out</label></li>
+                <li><input type="checkbox" id="staying" name="staying" /><label for="staying">Staying over</label></li>
+                <li><input type="checkbox" id="todo" name="todo" /><label for="todo">Things to do</label></li>
+                <li><input type="checkbox" id="heritage" name="heritage" /><label for="heritage">Heritage in Coventry</label></li>
             </ul>
         </div>
-        <div class="ccc26_search-cats">
+        <!-- <div class="ccc26_search-cats">
             <ul>
                 <li class="active"><a href="#">All</a></li>
                 <li><a href="#">What's On</a></li>
@@ -47,7 +47,7 @@
                 <li><a href="#">Things to do</a></li>
                 <li><a href="#">Heritage in Coventry</a></li>
             </ul>
-        </div>
+        </div> -->
         <div class="ccc26_search-form">
             <form action="<?php echo home_url( '/' ); ?>">
                 <input type="text" name="s" placeholder="Search..." />
