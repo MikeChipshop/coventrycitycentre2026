@@ -260,9 +260,13 @@ form textarea::placeholder {
 /* ------------------------------------------------
  Global Header
 ------------------------------------------------ */
+header.ccc26_global-header {
+    padding-top: 16px;
+}
 .ccc26_global-header .ccc26_wrap {
 	display: flex;
 	align-items: end;
+	gap:1rem;
 }
 .ccc26_global-header-column:last-child {
 	flex: 1;
@@ -292,6 +296,7 @@ form textarea::placeholder {
 	color:var(--color-deep-blue);
 	display: flex;
     align-items: center;
+	white-space: nowrap;
 }
 .ccc26_global-header-column nav ul li a svg {
 	margin-right:4px;
@@ -320,7 +325,7 @@ form textarea::placeholder {
 
 /* Large */
 .ccc26_header-size-large .ccc26_global-header-column:first-child {
-    gap: 40px;
+    gap: 2rem;
 }
 .ccc26_header-size-large .ccc26_site-title div:last-child {
 	font-size:64px;
@@ -372,4 +377,61 @@ form textarea::placeholder {
 }
 .ccc26_global-footer-column.logo img {
 	width:100%;
+}
+
+@media only screen and (max-width : 1040px){
+	.ccc26_header-size-large .ccc26_global-header-column figure svg {
+		max-width: 130px;
+	}
+    .ccc26_header-size-large .ccc26_site-title div:last-child {
+		font-size: 48px;
+	}
+	.ccc26_header-size-large .ccc26_site-title div:first-child {
+		font-size: 32px;
+	}
+	.ccc26_header-size-large .ccc26_global-header-column:first-child {
+		gap: 1rem;
+	}
+}
+
+@media only screen and (max-width : 900px){
+	.ccc26_global-header .ccc26_wrap {
+		display: block;
+	}
+	.ccc26_global-header-column:first-child {
+		justify-content: center;
+	}
+	.ccc26_header-size-large .ccc26_global-header-column figure svg {
+		max-width: 100px;
+	}
+	.ccc26_global-header-column nav {
+		padding-top:16px;
+	}
+	.ccc26_global-header-column nav ul {
+		justify-content: center;
+	}	
+	.ccc26_global-header-column nav ul li:last-child {
+		padding-right: 16px;
+	}
+}
+
+@media only screen and (max-width : 680px){
+	.ccc26_header-size-large .ccc26_global-header-column figure svg {
+		max-width: 60px;
+	}
+	.ccc26_header-size-large .ccc26_site-title div:last-child {
+		font-size: 32px;
+	}
+	.ccc26_header-size-large .ccc26_site-title div:first-child {
+		font-size: 24px;
+	}	
+	.ccc26_global-header-column nav ul li {
+		padding: 4px 8px;
+	}
+	.ccc26_global-header-column nav ul li:last-child {
+		padding-right: 8px;
+	}
+	.ccc26_global-header-column nav ul li a {
+    	font-size: 18px;
+	}
 }
