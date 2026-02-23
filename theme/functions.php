@@ -225,7 +225,6 @@ function register_acf_blocks() {
     register_block_type( __DIR__ . '/inc/blocks/carousel-grid' );
     register_block_type( __DIR__ . '/inc/blocks/hero-carousel' );
     register_block_type( __DIR__ . '/inc/blocks/highlights' );
-    register_block_type( __DIR__ . '/inc/blocks/image-carousel' );
     register_block_type( __DIR__ . '/inc/blocks/image-grid' );
     register_block_type( __DIR__ . '/inc/blocks/information' );
     register_block_type( __DIR__ . '/inc/blocks/mini-grid' );
