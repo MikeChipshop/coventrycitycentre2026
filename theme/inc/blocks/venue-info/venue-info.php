@@ -108,6 +108,7 @@
                             </div>
                         </li>
                     <?php endif; ?>
+                    <?php if($telephone || $website || $email): ?>
                         <li x-data="{ expanded: false }">
                             <h3 
                                 id="ccc26_details-title-02"
@@ -141,7 +142,7 @@
                                 </div>
                             </div>
                         </li>
-
+                    <?php endif; ?>
                     <li x-data="{ expanded: false }">
                         <h3
                             id="ccc26_details-title-03"
