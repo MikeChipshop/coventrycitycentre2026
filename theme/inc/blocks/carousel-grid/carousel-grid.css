@@ -1,13 +1,31 @@
 /* ------------------------------------------------
  Carousel Grid
 ------------------------------------------------ */
+.ccc26_carousel-grid .embla {
+  --slide-size: 20%;
+  --slide-spacing: 16px;
+}
+.embla__viewport {
+  overflow: hidden;
+}
+.ccc26_carousel-grid .ccc26_wrap {
+	position:relative;
+	padding: 0px 60px;
+    --max-width: 1400px;
+}
+.ccc26_carousel-grid .embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+
+.ccc26_carousel-grid .embla__slide {
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+}
 .ccc26_carousel-grid {
 	padding:64px 0px;
-}
-.ccc26_carousel-grid-items ul {
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	gap: 16px;
 }
 .ccc26_carousel-grid header {
 	text-align:center;
@@ -52,4 +70,45 @@
 	font-size:18px;
 	font-family: "zuume", sans-serif;
 	font-weight: 700;
+}
+.ccc26_carousel-grid button.embla__next, 
+.ccc26_carousel-grid button.embla__prev {
+    border: none;
+    background: none;
+	position:absolute;
+	top:50%;
+	transform:translate-y(-50%);
+}
+.ccc26_carousel-grid button.embla__next {
+    right: 0px;
+    transform: scale(-1, 1);
+}
+.ccc26_carousel-grid button.embla__prev {
+    left: 0px;
+}
+.ccc26_carousel-grid button svg {
+	height:40px;
+}
+
+@media only screen and (max-width : 1020px){
+	.ccc26_carousel-grid .embla {
+		--slide-size: 25%;
+	}
+}
+
+@media only screen and (max-width : 900px){
+	.ccc26_carousel-grid .embla {
+		--slide-size: 33.333%;
+	}
+}
+
+@media only screen and (max-width : 720px){
+	.ccc26_carousel-grid .embla {
+		--slide-size: 50%;
+	}
+}
+@media only screen and (max-width : 540px){
+	.ccc26_carousel-grid .embla {
+		--slide-size: 80%;
+	}
 }

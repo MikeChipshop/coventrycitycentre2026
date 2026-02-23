@@ -21,3 +21,9 @@
     width: 100%;
     object-fit: cover;
 }
+
+@media only screen and (max-width : 740px){
+    .ccc26_image-grid ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -31,19 +31,23 @@ ENQUEUES
 function dot_load_scripts() {
 
     wp_register_script( 'site-common', get_template_directory_uri() . '/js/site-common.js', array('jquery'),'',true  );	
+    wp_register_script( 'embla', 'https://unpkg.com/embla-carousel/embla-carousel.umd.js','' ,'', false );	
     wp_register_script( 'alpine', 'https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js', '','',array(
             'in_footer' => true,
             'strategy'  => 'defer',
         )  );
     
 	wp_enqueue_script( 'site-common' );
+    wp_enqueue_script( 'embla' );
     wp_enqueue_script( 'alpine' );
 
 	wp_register_style( 'main-css', get_template_directory_uri() . '/style.css?v=1','','', 'screen' );
 	wp_register_style( 'font-proxima-nova', 'https://use.typekit.net/fgj5ohh.css','','', 'screen' );
+    wp_register_style( 'glidecss', get_template_directory_uri() . '/css/glide.core.min.css','','', 'screen' );
 	
 	wp_enqueue_style( 'main-css' );	
 	wp_enqueue_style( 'font-proxima-nova' );
+    wp_enqueue_style( 'glidecss' );
 
 }
 
@@ -219,7 +223,7 @@ add_filter( 'block_categories_all', 'ccc26_block_category', 10, 2);
 add_action( 'init', 'register_acf_blocks', 5 );
 function register_acf_blocks() {
     register_block_type( __DIR__ . '/inc/blocks/carousel-grid' );
-    register_block_type( __DIR__ . '/inc/blocks/hero' );
+    register_block_type( __DIR__ . '/inc/blocks/hero-carousel' );
     register_block_type( __DIR__ . '/inc/blocks/highlights' );
     register_block_type( __DIR__ . '/inc/blocks/image-carousel' );
     register_block_type( __DIR__ . '/inc/blocks/image-grid' );

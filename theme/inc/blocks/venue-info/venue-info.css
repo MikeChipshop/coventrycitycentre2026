@@ -197,3 +197,12 @@
     content: "-";
     padding-right:4px;
 }
+@media only screen and (max-width : 740px){
+    .ccc26_venue-info .ccc26_wrap {
+        display: block;
+        padding: 32px 16px;
+    }
+    .ccc26_venue-column.gallery {
+        padding-bottom:32px;
+    }
+}

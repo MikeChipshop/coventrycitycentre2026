@@ -20,28 +20,34 @@
     class="<?php echo esc_attr($className); ?> ccc26_image-grid"     
 >
     <div class="ccc26_wrap">
-        <ul>
-            <li>
-                <a href="#">
-                    <figure>
-                        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/nav-grid-2.jpg">
-                    </figure>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <figure>
-                        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/nav-grid-2.jpg">
-                    </figure>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <figure>
-                        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/nav-grid-2.jpg">
-                    </figure>
-                </a>
-            </li>
-        </ul>
+        <?php if( have_rows('global_image_grid','option') ): ?>
+            <ul>
+                <?php while( have_rows('global_image_grid','option') ) : the_row(); ?>
+                    <li>                        
+                        <?php
+                            $attachment_id = get_sub_field('image');
+                            $size = "full";
+                            $image = wp_get_attachment_image_src( $attachment_id, $size ); 
+
+                            $link = get_sub_field('link');
+                            $label = get_sub_field('label');
+                        ?>
+                        <?php if($link): ?>
+                            <a href="<?php echo $link; ?>" title="<?php echo $label; ?>"> 
+                        <?php else: ?>
+                            <div>
+                        <?php endif; ?>
+                            <figure>
+                                <img src="<?php echo $image[0]; ?>" alt="<?php echo $label; ?>">
+                            </figure>
+                        <?php if($link): ?>
+                            </a>
+                        <?php else: ?>
+                            </div>
+                        <?php endif; ?>
+                    </li>
+                <?php endwhile; ?>
+            </ul>
+        <?php endif; ?>
     </div>
 </section>

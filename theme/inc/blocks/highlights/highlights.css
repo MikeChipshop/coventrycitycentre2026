@@ -5,6 +5,7 @@
 }
 .ccc26_highlights-column {
     flex: 1;
+    text-decoration:none;
 }
 .ccc26_highlights-column h2 {
     font-size: 32px;
@@ -68,4 +69,13 @@
 }
 .highlight-blue .ccc26_title-icon svg path {
     fill: var(--color-deep-blue);
+}
+
+@media only screen and (max-width : 800px){
+	.ccc26_highlights .ccc26_wrap {
+        display: block;
+    }
+    .ccc26_highlights-column:first-child {
+        padding-bottom:32px;
+    }
 }

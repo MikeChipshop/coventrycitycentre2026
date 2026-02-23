@@ -1,0 +1,90 @@
+.ccc26_hero-carousel {
+    padding-block: 64px 32px;
+}
+.ccc26_hero-carousel-wrap {
+    margin-inline: auto;
+    max-width: 1500px;
+    padding: 0px 16px;
+    position: relative;
+}
+.ccc26_hero-carousel-wrap .wrap {
+    margin-inline: auto;
+    max-width: 1250px;
+    width:100%;
+}
+
+/* Slider */
+.ccc26_hero-carousel-wrap .embla__container {
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+    margin-left: calc(16px * -1);
+}
+.ccc26_hero-carousel-wrap .embla__viewport {
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+}
+.ccc26_hero-carousel-wrap .embla__slide {
+    height:300px;
+}
+.ccc26_hero-carousel-wrap .embla__slide > div,
+.ccc26_hero-carousel-wrap .embla__slide figure {
+    height:100%;
+}
+.ccc26_hero-carousel-wrap .embla__slide {
+    min-width: 0;
+    padding-left: 16px;
+}
+.ccc26_hero-carousel-wrap .embla__slide:nth-child(odd) {
+    flex: 0 0 65%;    
+}
+.ccc26_hero-carousel-wrap .embla__slide:nth-child(even) {
+    flex: 0 0 35%;
+}
+.ccc26_hero-carousel-wrap img {
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    border-radius:32px;
+}
+.ccc26_hero-carousel-wrap button {
+    background:transparent;
+    border:none;
+    padding:0;
+    margin:0;
+    position:absolute;    
+    transform:translateY(-50%);
+    cursor:pointer;
+}
+.ccc26_hero-carousel-wrap .embla__prev {
+    left:-35px;
+    top:55%;
+} 
+.ccc26_hero-carousel-wrap .embla__next {
+    right:20px;
+    top:45%;
+}
+.ccc26_hero-carousel-wrap .embla__prev svg, 
+.ccc26_hero-carousel-wrap .embla__next svg {
+    display:block;    
+    height:auto;
+}
+.ccc26_hero-carousel-wrap .embla__prev svg {
+    width:210px;
+}
+.ccc26_hero-carousel-wrap .embla__next svg {
+    width:160px;
+}
+.ccc26_hero-carousel-wrap .embla__prev svg path, 
+.ccc26_hero-carousel-wrap .embla__next svg path {
+    fill:var(--color-yellow);
+    transition:fill .3s ease-in-out;
+}
+.ccc26_hero-carousel-wrap .embla__prev:hover svg path, 
+.ccc26_hero-carousel-wrap .embla__next:hover svg path {
+    fill:var(--color-pink);
+}
+.ccc26_hero-carousel-wrap svg rect {
+    fill:var(--color-light);
+}

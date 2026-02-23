@@ -21,9 +21,6 @@
 .ccc26_search-cats {
 	padding-bottom:30px;
 }
-.ccc26_search-cats-check {
-    padding-bottom: 32px;
-}
 .ccc26_search-cats ul {
     display: flex;
 	font-size:24px;
@@ -132,4 +129,30 @@
 .ccc26_search-cats-check input:checked + label {
     background-color: var(--color-yellow);
     color: var(--color-purple);
+}
+
+.ccc26_search-form {
+    padding-top: 32px;
+}
+
+@media only screen and (max-width : 820px){
+	.ccc26_search-cats-check {
+		overflow-y:auto;
+	}
+	.ccc26_search-cats-check ul label {
+		white-space:nowrap;
+	}
+	.ccc26_search-cats-check ul {
+		justify-content:start;
+	}
+	.ccc26_search-tips {
+		display:block;
+		text-align:center;
+		padding-top:64px;
+	}
+	.ccc26_search-lucky-dip a {
+		max-width: 360px;
+		margin-inline: auto;
+		margin-top: 32px;
+	}
 }
