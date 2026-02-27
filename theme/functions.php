@@ -121,6 +121,8 @@ if ( function_exists( 'register_nav_menus' ) ) {
     register_nav_menus(
         array(
           'main_menu' => 'Main Menu',
+          'footer_menu_one' => 'Footer Menu One',
+          'footer_menu_two' => 'Footer Menu Two',
         )
     );
 }
@@ -338,3 +340,11 @@ add_action('acf/input/admin_footer', function (): void {
     </script>
     HTML;
 });
+
+function change_wp_search_size($query) {
+    if ( $query->is_search ) // Make sure it is a search page
+        $query->query_vars['posts_per_page'] = -1; // Change 10 to the number of posts you would like to show
+
+    return $query; // Return our modified query variables
+}
+add_filter('pre_get_posts', 'change_wp_search_size'); // Hook our custom function onto the request filter

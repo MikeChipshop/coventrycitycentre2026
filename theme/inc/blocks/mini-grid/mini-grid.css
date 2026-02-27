@@ -38,6 +38,10 @@
     text-decoration: none;
     color: var(--color-pink);
 }
+.ccc26_mini-grid h2 a:hover {
+    text-decoration: none;
+    color: var(--color-deep-blue);
+}
 .ccc26_mini-grid ul div {
     color: var(--color-deep-blue);
     font-family: "zuume", sans-serif;

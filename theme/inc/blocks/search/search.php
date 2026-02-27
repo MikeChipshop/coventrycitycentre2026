@@ -26,22 +26,25 @@
                 <p>Searching for something in particular for your trip to Coventry? Let us help you…</p>
             </div>
         </header>
-        <div class="ccc26_search-cats-check">
-            <ul>
-                <li><input type="checkbox" id="all" name="all" checked /><label for="all">All</label></li>
-                <li><input type="checkbox" id="whatson" name="whatson" /><label for="whatson">What's On</label></li>
-                <li><input type="checkbox" id="shop" name="shop" /><label for="shop">Shop 'till you drop</label></li>
-                <li><input type="checkbox" id="dine" name="dine" /><label for="dine">Eating out</label></li>
-                <li><input type="checkbox" id="staying" name="staying" /><label for="staying">Staying over</label></li>
-                <li><input type="checkbox" id="todo" name="todo" /><label for="todo">Things to do</label></li>
-                <li><input type="checkbox" id="heritage" name="heritage" /><label for="heritage">Heritage in Coventry</label></li>
-            </ul>
-        </div>
+        
         <div class="ccc26_search-form">
             <form action="<?php echo home_url( '/' ); ?>">
-                <input type="text" name="s" placeholder="Search..." />
-                <button type="submit">Go</button>
-                <input type="hidden" name="post_type" value="directory">
+                <div class="ccc26_search-cats-check">
+                    <ul>
+                        <li><input type="checkbox" id="all" name="section[]" checked /><label for="all">All</label></li>
+                        <li><input type="checkbox" id="whatson" name="section[]" /><label for="whatson">What's On</label></li>
+                        <li><input type="checkbox" id="shop" name="section[]" value="shop" /><label for="shop">Shop 'till you drop</label></li>
+                        <li><input type="checkbox" id="dine" name="section[]" value="dine" /><label for="dine">Eating out</label></li>
+                        <li><input type="checkbox" id="staying" name="section[]" /><label for="staying">Staying over</label></li>
+                        <li><input type="checkbox" id="todo" name="section[]" value="experience" /><label for="todo">Things to do</label></li>
+                        <li><input type="checkbox" id="heritage" name="section[]" value="heritage" /><label for="heritage">Heritage in Coventry</label></li>
+                    </ul>
+                </div>
+                <div class="ccc26_search-form-fields">
+                    <input type="text" name="s" placeholder="Search..." />
+                    <button type="submit">Go</button>
+                    <input type="hidden" name="post_type" value="directory">
+                </div>
             </form>
         </div>
         <div class="ccc26_search-tips">

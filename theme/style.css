@@ -222,6 +222,9 @@ button.ccc26_favourite-button.is-fav svg path {
     text-decoration: none;
     color: var(--color-pink);
 }
+.ccc26_mini-grid h2 a:hover {
+    color: var(--color-deep-blue);
+}
 .ccc26_mini-grid ul div {
     color: var(--color-deep-blue);
     font-family: "zuume", sans-serif;
@@ -233,6 +236,51 @@ button.ccc26_favourite-button.is-fav svg path {
 }
 .ccc26_mini-grid ul div a {
     color: var(--color-deep-blue);
+}
+/* ------------------------------------------------
+ Favourites
+------------------------------------------------ */
+.is-fav {
+	background-color: pink;
+	color: #fff;
+	border-color: #fff;
+}
+#fav-items h2 {
+	padding-bottom: 16px;
+	font-weight: 700;
+	font-size: 24px;
+}
+.fav-spinner {
+	width: 40px;
+	height: 40px;
+	border: 4px solid #ddd;
+	border-top-color: #333;
+	border-radius: 50%;
+	animation: spin 0.8s linear infinite;
+	margin: 20px auto;
+}
+@keyframes spin {
+	to { transform: rotate(360deg); }
+}
+.fav-post {
+	opacity: 0;
+	transform: translateY(10px);
+	transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), 
+				opacity 0.35s ease,
+				max-height 0.35s ease;
+	max-height: 500px;
+	overflow: hidden;
+}
+.fav-post.is-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+.fav-post.removing {
+	opacity: 0;
+	transform: translateY(-10px) scale(0.95);
+	max-height: 0;
+	margin: 0;
+	padding: 0;
 }
 /* ------------------------------------------------
  Forms
@@ -340,6 +388,36 @@ header.ccc26_global-header {
 }
 .ccc26_header-size-large .ccc26_global-header-column figure svg {
     max-width: 180px;
+}
+
+/* ------------------------------------------------
+ Single Post RTE
+------------------------------------------------ */
+.single .ccc26_page-content {
+	padding:32px 0px;
+}
+.single .ccc26_page-content > p {
+	max-width: 860px;
+    margin-inline: auto;
+    padding: 0 16px 16px 16px;
+}
+.single .ccc26_page-content > p a {
+	color: var(--color-pink);
+	text-decoration:none;
+}
+.single .ccc26_page-content > p a:hover {
+	text-decoration:underline;
+}
+.single .ccc26_page-content > h1:first-child {
+	color: var(--color-pink)!important;
+    font-family: "zuume", sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    font-size: 40px;
+    text-wrap: balance;
+	max-width: 860px;
+    margin-inline: auto;
+    padding: 0 16px 32px 16px;
 }
 
 /* ------------------------------------------------

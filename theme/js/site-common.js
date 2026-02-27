@@ -18,13 +18,10 @@ jQuery(document).ready(function( $ ) {
     });
     
 });
+
 /* Favourite Items Logic */
 
-const favOptions = {
-    container: "#fav-items",
-    postType: "directory",
-    emptyMessage: "<div><h2>Hey, You don't have any favourites yet!</h2><p>You haven't saved anything yet. Where ever you see a heart button around the website, you can click this and save a list of your favourite items for exploring later.</p></div>"
-};
+
 
 
 function getFavList() {
@@ -78,10 +75,9 @@ document.addEventListener("DOMContentLoaded", () => {
     updateFavButtons();
     loadFavPosts(favOptions);
 });
-
-
-
-/* ------------------- */
+/***************************************************
+/ Favourites List
+/***************************************************/
 
 function loadFavPosts(options = {}) {
     const {
@@ -92,16 +88,28 @@ function loadFavPosts(options = {}) {
         fallbackImage = "https://2026.coventrycitycentre.co.uk/wp-content/themes/coventrycitycentre2026/img/placeholder.png"
     } = options;
 
+    // Get favourites (you store numbers)
     const favList = JSON.parse(localStorage.getItem("favelist")) || { ids: [] };
-    const ids = favList.ids;
+    const ids = favList.ids; // keep as numbers
 
     const target = document.querySelector(container);
     if (!target) return;
 
-    // Show empty message if no favourites
-    if (ids.length === 0) {
-        target.innerHTML = emptyMessage;
+    // CASE 1: no IDs at all → show message, no UL
+    if (!ids || ids.length === 0) {
+        target.innerHTML = `<div class="fav-empty">${emptyMessage}</div>`;
         return;
+    }
+
+    // Clear any previous empty message
+    target.querySelector(".fav-empty")?.remove();
+
+    // Ensure UL exists
+    let list = target.querySelector("ul");
+    if (!list) {
+        list = document.createElement("ul");
+        list.className = "fav-posts-list";
+        target.appendChild(list);
     }
 
     const url = `/wp-json/wp/v2/${postType}?include=${ids.join(",")}&orderby=include&_embed=wp:featuredmedia`;
@@ -109,10 +117,20 @@ function loadFavPosts(options = {}) {
     fetch(url)
         .then(res => res.json())
         .then(posts => {
+            // TEMP: log to see what's really happening
+            console.log("Fav IDs:", ids);
+            console.log("Posts from API:", posts);
+
+            // If API returns nothing, show empty message
+            if (!Array.isArray(posts) || posts.length === 0) {
+                target.innerHTML = `<div class="fav-empty">${emptyMessage}</div>`;
+                return;
+            }
+
             // Store current items and their positions (FIRST)
-            const currentItems = [...target.querySelectorAll(".fav-post:not(.removing)")];
+            const currentItems = [...list.querySelectorAll(".fav-post:not(.removing)")];
             const firstPositions = new Map();
-            
+
             currentItems.forEach(item => {
                 const rect = item.getBoundingClientRect();
                 firstPositions.set(item.dataset.id, {
@@ -123,67 +141,57 @@ function loadFavPosts(options = {}) {
             });
 
             // Find items to remove
-            const postIds = new Set(posts.map(p => String(p.id)));
-            const itemsToRemove = currentItems.filter(item => !postIds.has(item.dataset.id));
-            
-            // Mark items for removal
-            itemsToRemove.forEach(item => {
-                item.classList.add("removing");
-            });
+            const postIds = new Set(posts.map(p => p.id)); // numbers
+            const itemsToRemove = currentItems.filter(
+                item => !postIds.has(parseInt(item.dataset.id, 10))
+            );
 
-            // Wait for removal animation, then actually remove and animate remaining
+            // Mark items for removal
+            itemsToRemove.forEach(item => item.classList.add("removing"));
+
             setTimeout(() => {
                 // Remove the items from DOM
                 itemsToRemove.forEach(item => item.remove());
 
                 // Get remaining items
-                const remainingItems = [...target.querySelectorAll(".fav-post:not(.removing)")];
+                const remainingItems = [...list.querySelectorAll(".fav-post:not(.removing)")];
 
-                // Measure new positions (LAST)
+                // FLIP animation for remaining
                 remainingItems.forEach(item => {
                     const firstPos = firstPositions.get(item.dataset.id);
                     if (!firstPos) return;
 
                     const lastPos = item.getBoundingClientRect();
-
-                    // Calculate difference (INVERT)
                     const deltaY = firstPos.top - lastPos.top;
                     const deltaX = firstPos.left - lastPos.left;
 
-                    // Only animate if there's actually a change
                     if (deltaY !== 0 || deltaX !== 0) {
-                        // Disable transitions temporarily
-                        item.style.transition = 'none';
-                        
-                        // Apply inverse transform
+                        item.style.transition = "none";
                         item.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
-                        
-                        // Force reflow
                         item.offsetHeight;
-                        
-                        // Re-enable transitions
-                        item.style.transition = '';
-                        
-                        // Animate to natural position (PLAY)
+                        item.style.transition = "";
                         requestAnimationFrame(() => {
-                            item.style.transform = '';
+                            item.style.transform = "";
                         });
                     }
                 });
 
                 // Add new items
-                const existingIds = new Set(remainingItems.map(item => item.dataset.id));
-                
+                const existingIds = new Set(
+                    remainingItems.map(item => parseInt(item.dataset.id, 10))
+                );
+
                 posts.forEach(post => {
-                    if (!existingIds.has(String(post.id))) {
-                        // Get thumbnail URL with fallback
+                    if (!existingIds.has(post.id)) {
                         let thumbnailUrl = fallbackImage;
 
-                        if (post._embedded && 
-                            post._embedded['wp:featuredmedia'] && 
-                            post._embedded['wp:featuredmedia'][0] &&
-                            post._embedded['wp:featuredmedia'][0].source_url) {
-                            thumbnailUrl = post._embedded['wp:featuredmedia'][0].source_url;
+                        if (
+                            post._embedded &&
+                            post._embedded["wp:featuredmedia"] &&
+                            post._embedded["wp:featuredmedia"][0] &&
+                            post._embedded["wp:featuredmedia"][0].source_url
+                        ) {
+                            thumbnailUrl = post._embedded["wp:featuredmedia"][0].source_url;
                         }
 
                         const html = `
@@ -202,30 +210,59 @@ function loadFavPosts(options = {}) {
                                 <div><a href="${post.link}">Find out more ></a></div>
                             </li>
                         `;
-                        
-                        const temp = document.createElement('div');
+
+                        const temp = document.createElement("div");
                         temp.innerHTML = html;
                         const newItem = temp.firstElementChild;
-                        
-                        target.appendChild(newItem);
-                        
-                        // Trigger fade-in animation
+
+                        list.appendChild(newItem);
+
                         requestAnimationFrame(() => {
                             newItem.classList.add("is-visible");
                         });
                     }
                 });
-
-            }, 350); // Match the CSS removal animation duration
-
+            }, 350);
         })
         .catch(err => {
             console.error("Error loading favourite posts:", err);
-            target.innerHTML = `
-                <h2>Error loading favourites</h2>
-                <p>Could not load favourites. Please refresh the page and try again.</p>
-            `;
         });
 }
 
-loadFavPosts();
+const favOptions = {
+    container: "#fav-items",
+    postType: "directory",
+    emptyMessage: "<div><h2>Hey, You don't have any favourites yet!</h2><p>You haven't saved anything yet. Where ever you see a heart button around the website, you can click this and save a list of your favourite items for exploring later.</p></div>"
+};
+
+
+loadFavPosts(favOptions);
+
+/***************************************************
+/ Search Checkboxes
+/***************************************************/
+const allBox = document.getElementById("all");
+const otherBoxes = [
+    "whatson",
+    "shop",
+    "dine",
+    "staying",
+    "todo",
+    "heritage"
+].map(id => document.getElementById(id));
+
+// When "All" is clicked → uncheck everything else
+allBox.addEventListener("change", () => {
+    if (allBox.checked) {
+        otherBoxes.forEach(box => box.checked = false);
+    }
+});
+
+// When any other box is clicked → uncheck "All"
+otherBoxes.forEach(box => {
+    box.addEventListener("change", () => {
+        if (box.checked) {
+            allBox.checked = false;
+        }
+    });
+});

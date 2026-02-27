@@ -3,6 +3,12 @@
 <head>       
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="<?php bloginfo('url'); ?>/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="<?php bloginfo('url'); ?>/favicon.svg" />
+    <link rel="shortcut icon" href="<?php bloginfo('url'); ?>/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('url'); ?>/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Coventry City Centre" />
+    <link rel="manifest" href="<?php bloginfo('url'); ?>/site.webmanifest" />
     <?php wp_head(); ?>
 </head>
 <?php
@@ -52,13 +58,7 @@
                                 Your Favourites
                             </a>
                         </li>
-                        <li>
-                            <a href="#">Accessibility</a>
-                        </li>
-                        <li>
-                            <a href="#">Sustainability</a>
-                        </li>
-                        <li><a href="#">Search</a></li>
+                        <?php wp_nav_menu( array('container' => false, 'theme_location' => 'main_menu' )); ?>
                     </ul>
                 </nav>
             </div>

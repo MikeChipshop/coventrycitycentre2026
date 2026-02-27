@@ -178,6 +178,13 @@
     margin: 0px;
     padding-left: 20px;
 }
+.ccc26_venue-content a {
+    color: var(--color-pink);
+    text-decoration: none;
+}
+.ccc26_venue-content a:hover {
+    text-decoration: underline;
+}
 
 /* Opening Hours */
 .ccc26_opening-hours-list {
