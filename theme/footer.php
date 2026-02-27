@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="ccc26_global-footer-bottom">
-            <p>Site content copyright &copy;<?php echo date("Y"); ?></p>
+            <p>Site content copyright &copy;<?php echo date("Y"); ?> - v1.0</p>
         </div>
     </div>
 </footer>
