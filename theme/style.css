@@ -94,9 +94,54 @@ body {
 	padding: 0 16px;
 }
 main.ccc26_page-content.legal {
-    max-width: var(--max-width);
+    max-width: 900px;
     padding: 0px 16px;
 	margin-inline:auto;
+}
+main.ccc26_page-content.legal > p {
+    padding-bottom: 16px;
+}
+main.ccc26_page-content.legal > ul,
+main.ccc26_page-content.legal > ol {
+    padding: 0px 0px 16px 20px;
+	margin:0;
+}
+main.ccc26_page-content.legal > ol {
+    list-style-type: decimal;
+}
+main.ccc26_page-content.legal > ul {
+    list-style-type: disc;
+}
+main.ccc26_page-content.legal > ul li,
+main.ccc26_page-content.legal > ol li {
+    padding-bottom:4px;
+}
+main.ccc26_page-content.legal > h1 {
+    padding-bottom: 16px;
+    font-weight: bold;
+    font-size: 34px;
+    font-family: "zuume", sans-serif;
+    font-weight: 700;
+}
+main.ccc26_page-content.legal > h2 {
+    padding-bottom: 16px;
+    font-weight: bold;
+    padding-top: 16px;
+    font-size: 24px;
+    font-family: "zuume", sans-serif;
+    font-weight: 700;
+}
+main.ccc26_page-content.legal > h3 {
+    padding-bottom: 16px;
+    font-weight: bold;
+    padding-top: 16px;
+    font-size: 20px;
+}
+main.ccc26_page-content.legal > h4 {
+    padding-bottom: 18px;
+    font-weight: bold;
+    padding-top: 16px;
+    font-size: 18px;
 }
 a {
 	text-decoration:none;
@@ -308,8 +353,28 @@ form textarea::placeholder {
   opacity: 0.3;
   color: var(--color-purple);
 }
-
-
+.wpcf7 form .wpcf7-response-output {
+    margin: 0px;
+    padding: 16px;
+    border: 2px solid #00a0d2;
+}
+.wpcf7 form.sent .wpcf7-response-output {
+    border-color: #46b450;
+    background-color: #46b450;
+}
+.wpcf7-form-control-wrap {
+    display: block;
+}
+.wpcf7-not-valid-tip {
+    color: #ffa8a8;
+    padding-top: 8px;
+}
+.wpcf7 form.invalid .wpcf7-response-output, 
+.wpcf7 form.unaccepted .wpcf7-response-output, 
+.wpcf7 form.payment-required .wpcf7-response-output {
+    border-color: #ff5454;
+    background-color: #ff5454;
+}
 /* ------------------------------------------------
  Global Header
 ------------------------------------------------ */
@@ -436,7 +501,7 @@ header.ccc26_global-header {
 .ccc26_global-footer-top {
     display: flex;
     justify-content: space-evenly;
-	gap:16px;
+	gap:32px;
 }
 .ccc26_global-footer-column nav {
     display: flex;

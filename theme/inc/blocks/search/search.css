@@ -101,6 +101,9 @@
     line-height: 1;
     gap: 4px;
 }
+.ccc26_search-cats-check ul li {
+	position: relative;
+}
 .ccc26_search-cats-check ul input[type="checkbox"] {
 	clip: rect(0 0 0 0);
     clip-path: inset(100%);

@@ -68,11 +68,10 @@
 
                 <?php if($b2Form): ?>
                     <div class="ccc26_pos-form">
-                        <?php echo $b2Form; ?>
+                        <?php echo do_shortcode($b2Form); ?>
                     </div>
                 <?php endif; ?>
-            </div>
-            
+            </div>            
         </div>
     </div>
 </section>

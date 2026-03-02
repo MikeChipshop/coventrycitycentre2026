@@ -26,10 +26,12 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $youTubeURL; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         <?php else: ?>
+            <div class="ccc26_video-embed">
             <video autoplay muted loop>
-                <source src="<?php the_field('video_url'); ?>" type="video/mp4">
+                <source src="<?php echo get_field('uploaded_video'); ?>" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+        </div>
         <?php endif; ?>
     </div>
 </section>

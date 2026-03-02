@@ -21,7 +21,7 @@ if ( function_exists( 'add_image_size' ) ) add_theme_support( 'post-thumbnails' 
 /***************************************************/
 
 if ( function_exists( 'add_image_size' ) ) {
-	//add_image_size( 'square', 620, 620, true );
+	add_image_size( 'ad-banner', 728, 90, false );
 }
 
 /****************************************************
@@ -224,6 +224,7 @@ add_filter( 'block_categories_all', 'ccc26_block_category', 10, 2);
 
 add_action( 'init', 'register_acf_blocks', 5 );
 function register_acf_blocks() {
+    register_block_type( __DIR__ . '/inc/blocks/ad-banner' );
     register_block_type( __DIR__ . '/inc/blocks/carousel-grid' );
     register_block_type( __DIR__ . '/inc/blocks/hero-carousel' );
     register_block_type( __DIR__ . '/inc/blocks/highlights' );

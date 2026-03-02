@@ -15,12 +15,12 @@
             </div>
             <div class="ccc26_global-footer-column logo">
                 <a href="https://coventrybid.co.uk" target="_blank">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/coventryBID-footer.png" alt="Visit Coventry BID">
+                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/coventrybid-logo.png" alt="Visit Coventry BID">
                 </a>
             </div>
         </div>
         <div class="ccc26_global-footer-bottom">
-            <p>Site content copyright &copy;<?php echo date("Y"); ?> - v1.0</p>
+            <p>Site content copyright &copy;<?php echo date("Y"); ?></p>
         </div>
     </div>
 </footer>

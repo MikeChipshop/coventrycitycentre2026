@@ -31,7 +31,7 @@
             <form action="<?php echo home_url( '/' ); ?>">
                 <div class="ccc26_search-cats-check">
                     <ul>
-                        <li><input type="checkbox" id="all" name="section[]" checked /><label for="all">All</label></li>
+                        <li><input type="checkbox" id="all" checked /><label for="all">All</label></li>
                         <li><input type="checkbox" id="whatson" name="section[]" /><label for="whatson">What's On</label></li>
                         <li><input type="checkbox" id="shop" name="section[]" value="shop" /><label for="shop">Shop 'till you drop</label></li>
                         <li><input type="checkbox" id="dine" name="section[]" value="dine" /><label for="dine">Eating out</label></li>

@@ -54,6 +54,11 @@
 .ccc26_mini-grid ul div a {
     color: var(--color-deep-blue);
 }
+.ccc26_mini-grid ul div.ccc26_mini-grid-excerpt {
+    font-family: 'proxima-nova';
+    text-transform: none;
+    font-size: 16px;
+}
 
 @media only screen and (max-width : 900px){
     .ccc26_mini-grid ul {

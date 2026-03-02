@@ -204,6 +204,44 @@
     content: "-";
     padding-right:4px;
 }
+
+/* Socials */
+.ccc26_venue-socials ul {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    padding-bottom: 32px;
+    padding-left: 36px;
+}
+.ccc26_venue-socials a {
+    height: 30px;
+    width: 30px;
+    border: 1px solid var(--color-pink);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    transition: all .3s ease;
+}
+.ccc26_venue-socials a:hover {
+    background-color: var(--color-pink);
+}
+.ccc26_venue-socials svg {
+    height: 20px;
+    width: auto;
+}
+.ccc26_venue-socials a svg path {
+    fill: var(--color-pink);
+    transition: fill .3s ease;
+}
+.ccc26_venue-socials a:hover svg path {
+    fill: var(--color-light);
+}
 @media only screen and (max-width : 740px){
     .ccc26_venue-info .ccc26_wrap {
         display: block;

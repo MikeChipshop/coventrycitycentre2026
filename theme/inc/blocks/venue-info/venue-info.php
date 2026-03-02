@@ -139,6 +139,9 @@
                                             <?php endif; ?>
                                         </ul>
                                     </div>
+                                    <div class="ccc26_venue-socials">                                        
+                                        <?php get_template_part( 'inc/venue', 'socials' ); ?>
+                                    </div>
                                 </div>
                             </div>
                         </li>
@@ -192,7 +195,8 @@
                                     <?php if(get_field('map_type') === 'smartthing'): ?>
                                         <iframe src="<?php the_field('map_url'); ?>" width="100%" height="600" frameborder="0"  allow="geolocation"  scrolling="no">Your browser does not support iframes.</iframe>
                                     <?php else: ?>
-
+                                        <?php $mapGoogle = get_field('google_map'); ?>
+                                        <?php echo $mapGoogle; ?>
                                     <?php endif; ?>
                                 </div>
                             </div>
