@@ -33,8 +33,14 @@
    <div class="ccc26_wrap">
         <div class="ccc26_navigation-grid-column">
             <figure>
+                <?php if($imageLink): ?>
+                    <a href="<?php echo $imageLink; ?>" title="<?php echo $imageTitle; ?>">
+                <?php endif; ?>
                 <img src="<?php echo $image[0]; ?>" alt="<?php echo $imageTitle; ?>">
                 <?php if($imageTitle): ?><h3><?php echo $imageTitle; ?></h3><?php endif; ?>
+                <?php if($imageLink): ?>
+                    </a>    
+                <?php endif; ?>
             </figure>
             <div class="ccc26_navigation-grid-content">
                 <?php if($Title): ?><h2><?php echo $Title; ?></h2><?php endif; ?>
