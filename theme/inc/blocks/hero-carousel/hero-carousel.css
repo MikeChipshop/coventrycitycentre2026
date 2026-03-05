@@ -17,6 +17,9 @@
 .ccc26_hero-carousel-wrap .embla__container {
     display: flex;
     touch-action: pan-y pinch-zoom;
+    margin:0;
+    padding:0;
+    list-style-type: none;
     margin-left: calc(16px * -1);
 }
 .ccc26_hero-carousel-wrap .embla__viewport {

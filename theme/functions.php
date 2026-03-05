@@ -324,7 +324,18 @@ function random_add_rewrite() {
 add_action('template_redirect','random_template');
 function random_template() {
    if (get_query_var('random') == 1) {
-           $posts = get_posts('post_type=directory&orderby=rand&numberposts=1');
+            $args = array(
+                'post_type'  => 'directory',
+                'orderby' => 'rand',
+                'numberposts' => 1,
+                'meta_query' => array(
+                    array(
+                        'key'   => 'remove_from_lucky_dip',
+                        'value' => 0,
+                    )
+                )
+            );
+           $posts = get_posts($args);
            foreach($posts as $post) {
                    $link = get_permalink($post);
            }
