@@ -10,6 +10,9 @@
     if( !empty($block['align']) ):
         $className .= ' align' . $block['align'];
     endif;
+
+    $gridTitle = get_field('grid_title');
+    $gridIntro = get_field('grid_intro');
 ?>
 
 <section 
@@ -17,6 +20,18 @@
     class="<?php echo esc_attr($className); ?> ccc26_mini-grid <?php echo get_field('content_grid'); ?>"     
 >
     <div class="ccc26_wrap">
+        <?php if($gridTitle || $gridIntro): ?>
+            <header class="ccc26_mini-grid-header">
+                <?php if($gridTitle): ?>
+                    <h2><?php echo $gridTitle; ?></h2>
+                <?php endif; ?>
+                <?php if($gridIntro): ?>
+                    <div class="ccc26_mini-grid-intro">
+                        <p><?php echo $gridIntro; ?></p>
+                    </div>
+                <?php endif; ?>
+            </header>
+        <?php endif; ?>
         <nav>
             <ul>
                 <?php 
@@ -62,7 +77,11 @@
                                     </a>
                                     <button class="ccc26_favourite-button ccc26_toggle-favourite" data-id="<?php echo get_the_ID(); ?>"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z"/></svg></button>
                                 </figure>
-                                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                                <?php if($gridTitle): ?>
+                                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                <?php else: ?>
+                                    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                                <?php endif; ?>
                                 <div><a href="<?php the_permalink(); ?>">Find out more ></a></div>                    
                             </li>
                         <?php endwhile; ?>
@@ -96,7 +115,11 @@
                                     </a>
                                     <button class="ccc26_favourite-button ccc26_toggle-favourite" data-id="<?php echo get_the_ID(); ?>"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z"/></svg></button>
                                 </figure>
-                                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                                <?php if($gridTitle): ?>
+                                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                <?php else: ?>
+                                    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                                <?php endif; ?>
                                 <div><a href="<?php the_permalink(); ?>">Find out more ></a></div>                    
                             </li>
                         <?php endwhile; ?>
@@ -124,7 +147,11 @@
                                         <?php endif; ?>
                                     </a>
                                 </figure>
-                                <h2><a href="<?php echo $itemLink; ?>" <?php if($itemTab): ?>target="_blank"<?php endif; ?>><?php echo $itemTitle; ?></a></h2>    
+                                <?php if($gridTitle): ?>
+                                    <h3><a href="<?php echo $itemLink; ?>" <?php if($itemTab): ?>target="_blank"<?php endif; ?>><?php echo $itemTitle; ?></a></h3>
+                                <?php else: ?>
+                                    <h2><a href="<?php echo $itemLink; ?>" <?php if($itemTab): ?>target="_blank"<?php endif; ?>><?php echo $itemTitle; ?></a></h2>    
+                                <?php endif; ?>
                                 <?php if($itemExcerpt): ?>
                                     <div class="ccc26_mini-grid-excerpt"><?php echo $itemExcerpt; ?></div>
                                 <?php endif; ?>

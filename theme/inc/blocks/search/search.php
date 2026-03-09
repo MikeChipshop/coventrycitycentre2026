@@ -23,7 +23,7 @@
         <header>
             <h2>Looking for something</h2>
             <div class="ccc26_search-intro">
-                <p>Searching for something in particular for your trip to Coventry? Let us help you…</p>
+                <p>Search for shops, places to eat, venues, and services in Coventry city centre.</p>
             </div>
         </header>
         
