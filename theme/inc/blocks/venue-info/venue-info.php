@@ -43,7 +43,7 @@
                     -->
         </div>
         <div class="ccc26_venue-column content">
-            <h2><?php the_title(); ?></h2>
+            <h1><?php the_title(); ?></h1>
             <div class="ccc26_venue-content">
                 <?php echo $description; ?>
             </div>
@@ -51,7 +51,7 @@
                 <ul>
                     <?php if ( ( $openingHours ) || ( $customOpeningHours ) ) : ?>
                         <li x-data="{ expanded: false }">
-                            <h3 
+                            <h2 
                                 id="ccc26_details-title-01"
                                 @click="expanded = !expanded"
                                 :class="{ 'active': expanded }"
@@ -64,7 +64,7 @@
                                 <div class="ccc26_details-title">
                                     Opening Times
                                 </div>
-                            </h3>
+                            </h2>
                             <div id="ccc26_details-content-01" class="ccc26_venue-detail-content" :class="expanded ? 'expanded' : 'collapsed'">
                                 <div>
                                     <div class="ccc26_venue-detail-content-container">
@@ -110,7 +110,7 @@
                     <?php endif; ?>
                     <?php if($telephone || $website || $email): ?>
                         <li x-data="{ expanded: false }">
-                            <h3 
+                            <h2 
                                 id="ccc26_details-title-02"
                                 @click="expanded = !expanded"
                                 :class="{ 'active': expanded }"
@@ -123,7 +123,7 @@
                                 <div class="ccc26_details-title">
                                     Contact
                                 </div>
-                            </h3>
+                            </h2>
                             <div id="ccc26_details-content-02" class="ccc26_venue-detail-content" :class="expanded ? 'expanded' : 'collapsed'">
                                 <div>
                                     <div class="ccc26_venue-detail-content-container contact">
@@ -147,7 +147,7 @@
                         </li>
                     <?php endif; ?>
                     <li x-data="{ expanded: false }">
-                        <h3
+                        <h2
                             id="ccc26_details-title-03"
                             @click="expanded = !expanded"
                             :class="{ 'active': expanded }"
@@ -160,7 +160,7 @@
                             <div class="ccc26_details-title">
                                 How to get there
                             </div>
-                        </h3>
+                        </h2>
                         <div id="ccc26_details-content-03" class="ccc26_venue-detail-content" :class="expanded ? 'expanded' : 'collapsed'">
                             <div>
                                 <div class="ccc26_venue-detail-content-container">
@@ -170,7 +170,7 @@
                                     </div>
 
                                     <div class="ccc26_venue-location-parking">
-                                        <h4>Parking</h4>
+                                        <h3>Parking</h3>
                                         <?php $parking = get_field( 'parking' );?>
                                         <a href="<?php bloginfo('url'); ?>/parking/<?php echo esc_attr($parking['value']); ?>"><?php echo esc_attr($parking['label']); ?></a>
                                     </div>
@@ -178,7 +178,7 @@
                                     <div class="ccc26_venue-location-nearby">
                                         <?php $nearby = get_field('nearby'); ?>
                                         <?php if( $nearby ): ?>
-                                            <h4>Nearby</h4>
+                                            <h3>Nearby</h3>
                                             <ul>
                                             <?php foreach( $nearby as $nearbyitem ): 
                                                 $permalink = get_permalink( $nearbyitem->ID );
@@ -211,7 +211,7 @@
                                     $title = get_sub_field('title');
                                     $content = get_sub_field('content');
                                 ?>
-                                <h3
+                                <h2
                                     id="ccc26_details-title-as0<?php echo $count; ?>"
                                     @click="expanded = !expanded"
                                     :class="{ 'active': expanded }"
@@ -224,7 +224,7 @@
                                     <div class="ccc26_details-title">
                                         <?php echo $title; ?>
                                     </div>
-                                </h3>
+                                </h2>
                                 <div id="ccc26_details-content-as0<?php echo $count; ?>" class="ccc26_venue-detail-content" :class="expanded ? 'expanded' : 'collapsed'">
                                     <div>
                                         <div class="ccc26_venue-detail-content-container">

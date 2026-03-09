@@ -34,7 +34,7 @@
 .ccc26_venue-column.content {
     grid-column:8 / 17;
 }
-.ccc26_venue-column h2 {
+.ccc26_venue-column h1 {
     color: var(--color-pink);
     font-family: "zuume", sans-serif;
     font-weight: 700;
@@ -62,7 +62,7 @@
 .ccc26_details-title {
     padding-left:20px;
 }
-.ccc26_venue-column h3 {
+.ccc26_venue-column h2 {
     color: var(--color-deep-blue);
     font-family: "zuume", sans-serif;
     font-weight: 700;
@@ -76,8 +76,8 @@
     cursor:pointer;
     transition:color .3s ease-in-out;
 }
-.ccc26_venue-column h3:hover,
-.ccc26_venue-column h3.active {
+.ccc26_venue-column h2:hover,
+.ccc26_venue-column h2.active {
     color:var(--color-pink);
 }
 .ccc26_venue-detail-content {
@@ -153,8 +153,8 @@
     background-color: var(--color-deep-blue);
     border-color: var(--color-deep-blue);   
 }
-.ccc26_venue-location-nearby h4,
-.ccc26_venue-location-parking h4 {
+.ccc26_venue-location-nearby h3,
+.ccc26_venue-location-parking h3 {
     font-family: "zuume", sans-serif;
     font-weight: 700;
     line-height: 1;
