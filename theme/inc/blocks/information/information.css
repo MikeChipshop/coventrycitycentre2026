@@ -20,6 +20,14 @@
     line-height: 1;
     color:var(--color-deep-blue);
 }
+.ccc26_information-column h1 {
+    font-size: 40px;
+    font-family: "zuume", sans-serif;
+    font-weight: 700;
+    padding: 24px 0px;
+    line-height: 1;
+    color:var(--color-pink);
+}
 .ccc26_information-map {
 	background-color: #ccc;
     overflow: hidden;

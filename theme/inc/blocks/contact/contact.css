@@ -1,0 +1,83 @@
+.ccc26_contact .ccc26_wrap {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr 1fr;
+}
+.ccc26_contact-column {
+    flex: 1;
+}
+.ccc26_contact-column.content {
+	padding-right:5%;
+}
+.ccc26_contact-column.content a {
+	color:var(--color-pink);
+	text-decoration:none;
+}
+.ccc26_contact-column.content a:hover {
+	color:var(--color-purple);
+	text-decoration:underline;
+}
+.ccc26_contact-column.form {
+    background-color:var(--color-purple);
+	color:var(--color-light);
+	padding: 64px 32px;
+}
+.ccc26_contact-column.form input,
+.ccc26_contact-column.form textarea {
+	width:100%;
+}
+.ccc26_contact-column.form textarea {
+	border-radius:32px;
+}
+.ccc26_contact-column.form ul {
+	list-style-type: none;
+	padding:0px;
+	margin:0px;
+}
+.ccc26_contact-column.form li {
+	padding-bottom:32px;
+}
+.ccc26_contact-column.form input[type="submit"] {
+	background-color: var(--color-pink);
+    color: var(--color-light);
+    font-size: 32px;
+    padding: 8px 24px;
+    border: none;
+    font-family: "zuume", sans-serif;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.ccc26_contact-column.form label {
+	border: 0 !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+    position: absolute !important;
+}
+.ccc26_contact-column.form span.wpcf7-not-valid-tip {
+    padding-left: 24px;
+}
+.ccc26_contact-intro {
+	text-wrap:balance;
+	padding-bottom:32px;
+}
+.ccc26_contact-address {
+	padding-bottom:32px;
+}
+.ccc26_contact-image img {
+	width:100%;
+	height:auto;
+	max-width:100%;
+	display:block;
+}
+.ccc26_contact-image.top {
+	padding-bottom:32px;
+}
+.ccc26_contact-image.bottom {
+	padding-top:32px;
+}

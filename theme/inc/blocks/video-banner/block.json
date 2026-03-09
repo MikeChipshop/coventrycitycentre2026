@@ -4,7 +4,7 @@
     "description": "A custom video banner block.",
     "style": [ "file:./video-banner.css" ],
     "category": "coventrycitycentre2026",
-    "icon": "superhero-alt",
+    "icon": "format-video",
     "keywords": ["layout", "Coventry City Centre", "Video", "Banner"],
     "acf": {
         "blockVersion": 3,

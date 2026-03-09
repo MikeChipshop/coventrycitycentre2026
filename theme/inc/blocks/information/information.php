@@ -34,7 +34,11 @@
                 </div>
             </div>
             <div class="ccc26_information-column">
-                <h2><?php echo $mainTitle; ?></h2>
+                <?php if( get_field('intro') ): ?>
+                    <h1><?php echo $mainTitle; ?></h1>
+                <?php else: ?>
+                    <h2><?php echo $mainTitle; ?></h2>
+                <?php endif; ?>
                 <?php echo $mainContent; ?>
                 <div class="ccc26_information-nav">
                     <ul>

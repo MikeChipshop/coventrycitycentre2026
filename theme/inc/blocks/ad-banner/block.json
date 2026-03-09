@@ -4,7 +4,7 @@
     "description": "A custom ad banner block.",
     "style": [ "file:./ad-banner.css" ],
     "category": "coventrycitycentre2026",
-    "icon": "superhero-alt",
+    "icon": "money-alt",
     "keywords": ["layout", "Coventry City Centre", "Ad", "Banner"],
     "acf": {
         "blockVersion": 3,

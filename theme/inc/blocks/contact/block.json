@@ -1,0 +1,18 @@
+{
+    "name": "acf/contact",
+    "title": "Contact",
+    "description": "A custom contact block.",
+    "style": [ "file:./contact.css" ],
+    "category": "coventrycitycentre2026",
+    "icon": "email",
+    "keywords": ["layout", "Coventry City Centre", "Contact"],
+    "acf": {
+        "blockVersion": 3,
+        "mode": "preview",
+        "renderTemplate": "contact.php"
+    },
+    "supports": {
+        "align": false
+    },
+    "example": {}
+}

@@ -226,6 +226,7 @@ add_action( 'init', 'register_acf_blocks', 5 );
 function register_acf_blocks() {
     register_block_type( __DIR__ . '/inc/blocks/ad-banner' );
     register_block_type( __DIR__ . '/inc/blocks/carousel-grid' );
+    register_block_type( __DIR__ . '/inc/blocks/contact' );
     register_block_type( __DIR__ . '/inc/blocks/hero-carousel' );
     register_block_type( __DIR__ . '/inc/blocks/highlights' );
     register_block_type( __DIR__ . '/inc/blocks/image-grid' );
@@ -360,3 +361,5 @@ function change_wp_search_size($query) {
     return $query; // Return our modified query variables
 }
 add_filter('pre_get_posts', 'change_wp_search_size'); // Hook our custom function onto the request filter
+
+add_filter('wpcf7_autop_or_not', '__return_false');
