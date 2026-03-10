@@ -6,7 +6,7 @@
       "src": "/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any"
     },
     {
       "src": "/web-app-manifest-512x512.png",
@@ -15,7 +15,46 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#ef4766",
   "background_color": "#ffffff",
-  "display": "standalone"
+  "display": "standalone",
+  "start_url": "https://2026.coventrycitycentre.co.uk",
+  "dir": "ltr",
+  "lang": "en",
+  "orientation": "any",
+  "display_override": [
+    "window-controls-overlay"
+  ],
+  "id": "QtYpAe4NpzEpF",
+  "description": "Welcome to Coventry, a city rich in culture and history.\n\nThousands of people visit Coventry every year to experience our unique and exciting city. With a wide variety to see and do, we have handpicked some of the best for you.",
+  "shortcuts": [
+    {
+      "name": "Directory",
+      "url": "https://2026.coventrycitycentre.co.uk/directory-landing",
+      "description": "Coventry City Centre Directory"
+    },
+    {
+      "name": "Favourites",
+      "url": "https://2026.coventrycitycentre.co.uk/favourites",
+      "description": "Your Favourites"
+    },
+    {
+      "name": "Search",
+      "url": "https://2026.coventrycitycentre.co.uk/search",
+      "description": "Search the Directory"
+    },
+    {
+      "name": "Blog",
+      "url": "https://2026.coventrycitycentre.co.uk/blog",
+      "description": "Visit the Blog"
+    }
+  ],
+  "categories": [
+    "business",
+    "entertainment",
+    "food",
+    "lifestyle",
+    "shopping",
+    "travel"
+  ]
 }
