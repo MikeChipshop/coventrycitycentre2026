@@ -73,6 +73,15 @@
                                         <div>
                                             <div class="ccc26_venue-detail-content-container">
                                                 <?php echo $subContent; ?>
+                                                <?php if(get_sub_field('use_button')): ?>
+                                                    <?php
+                                                        $buttonLink = get_sub_field('button_link');
+                                                        $buttonText = get_sub_field('button_label');
+                                                    ?>
+                                                    <div class="ccc26_venue-detail-cta-button">                                                        
+                                                        <a href="<?php echo $buttonLink; ?>" title="<?php echo $buttonText; ?>"><?php echo $buttonText; ?></a>
+                                                    </div>
+                                                <?php endif; ?>
                                             </div>
                                         </div>
                                     </div>

@@ -98,6 +98,37 @@
 .ccc26_venue-detail-content-container {
     padding: 0px 16px 32px 42px;
 }
+.ccc26_venue-detail-content-container a {
+    color: var(--color-pink);
+    text-decoration: none;
+}
+.ccc26_venue-detail-content-container a:hover {
+    color: var(--color-purple);
+    text-decoration: underline;
+}
+.ccc26_venue-detail-cta-button a {
+    border-radius: 100px;
+    border: 1px solid var(--color-pink);
+    padding: 8px 32px;
+    display: inline-block;
+    font-size: 14px;
+    color: var(--color-light);
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    text-align: center;
+    background-color: var(--color-pink);
+    font-family: "zuume", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.ccc26_venue-detail-cta-button a:hover {
+    background-color:var(--color-purple);
+    border-color:var(--color-purple);
+    color: var(--color-light);
+    text-decoration: none;
+}
+
 /* Medium */
 .layout-medium .ccc26_information-column:nth-child(1) {
     flex-basis: 40%;
