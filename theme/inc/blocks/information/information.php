@@ -16,6 +16,7 @@
 
     $mainTitle = get_field('title');
     $mainContent = get_field('content');
+    $layoutStyle = get_field('layout_style');
 
     $attachment_id = get_field('image');
     $size = "full";
@@ -24,7 +25,7 @@
 
 <section 
     id="<?php echo esc_attr($id); ?>" 
-    class="<?php echo esc_attr($className); ?> ccc26_information"     
+    class="<?php echo esc_attr($className); ?> ccc26_information layout-<?php echo $layoutStyle; ?>"     
 >
     <div class="ccc26_wrap">        
         <div class="ccc26_information-top">

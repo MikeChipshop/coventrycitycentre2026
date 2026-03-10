@@ -98,6 +98,21 @@
 .ccc26_venue-detail-content-container {
     padding: 0px 16px 32px 42px;
 }
+/* Medium */
+.layout-medium .ccc26_information-column:nth-child(1) {
+    flex-basis: 40%;
+}
+.layout-medium .ccc26_information-column:nth-child(2) {
+    flex-basis: 60%;
+}
+
+/* Small */
+.layout-small .ccc26_information-column:nth-child(1) {
+    flex-basis: 25%;
+}
+.layout-small .ccc26_information-column:nth-child(2) {
+    flex-basis: 75%;
+}
 
 @media only screen and (max-width : 780px){
     .ccc26_information-top {
