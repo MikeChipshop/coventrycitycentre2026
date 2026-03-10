@@ -224,6 +224,7 @@ add_filter( 'block_categories_all', 'ccc26_block_category', 10, 2);
 add_action( 'init', 'register_acf_blocks', 5 );
 function register_acf_blocks() {
     register_block_type( __DIR__ . '/inc/blocks/ad-banner' );
+    register_block_type( __DIR__ . '/inc/blocks/blog-highlights' );
     register_block_type( __DIR__ . '/inc/blocks/carousel-grid' );
     register_block_type( __DIR__ . '/inc/blocks/contact' );
     register_block_type( __DIR__ . '/inc/blocks/hero-carousel' );

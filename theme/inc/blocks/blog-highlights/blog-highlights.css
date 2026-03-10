@@ -1,0 +1,97 @@
+.ccc26_blog-highlights {
+    padding-bottom: 32px;
+}
+.ccc26_blog-highlights .ccc26_wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+}
+.ccc26_blog-highlights figure {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 32px;
+	position:relative;
+}
+.ccc26_blog-highlights figure a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: var(--color-pink);
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+	transition:opacity .3s ease-in-out;
+}
+.ccc26_blog-highlights figure a:hover::before {
+	opacity: .9;
+}
+.ccc26_blog-highlights figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.ccc26_blog-highlights h2 {
+	color: var(--color-pink);
+    font-family: "zuume", sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    font-size: 32px;
+    text-wrap: balance;
+    padding-left: 32px;
+    padding-top: 16px;
+    margin: 0px;
+}
+.ccc26_blog-highlights h2 a {
+	color: var(--color-pink);
+	text-decoration: none;
+}
+.ccc26_blog-highlights h2 a:hover {
+	color: var(--color-purple);
+}
+.ccc26_blog-highlights-item > div {
+	padding-top:16px;
+}
+.ccc26_blog-highlights-item > div a {
+	color: var(--color-deep-blue);
+    font-family: "zuume", sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    padding-top: 8px;
+    padding-left: 32px;
+    font-size: 22px;
+	transition:color .3s ease-in-out;
+}
+.ccc26_blog-highlights-item > div a:hover {
+	color: var(--color-purple);
+}
+
+@media only screen and (max-width : 1020px){
+	.ccc26_blog-highlights .ccc26_wrap {
+		gap: 20px;
+	}
+	.ccc26_blog-highlights h2 {
+		font-size: 26px;
+	}
+}
+@media only screen and (max-width : 840px){
+	.ccc26_blog-highlights h2 {
+		font-size: 22px;
+	}
+	.ccc26_blog-highlights-item > div a {
+		font-size: 18px;
+	}
+}
+@media only screen and (max-width : 720px){
+	.ccc26_blog-highlights .ccc26_wrap {
+		grid-template-columns: 1fr;
+	}
+	.ccc26_blog-highlights h2 {
+		font-size: 28px;
+	}
+	.ccc26_blog-highlights-item > div {
+		padding-top: 8px;
+	}
+}

@@ -1,0 +1,18 @@
+{
+    "name": "acf/blog-highlights",
+    "title": "Blog Highlights",
+    "description": "A custom blog highlights block.",
+    "style": [ "file:./blog-highlights.css" ],
+    "category": "coventrycitycentre2026",
+    "icon": "awards",
+    "keywords": ["layout", "Coventry City Centre", "Blog", "Highlights"],
+    "acf": {
+        "blockVersion": 3,
+        "mode": "preview",
+        "renderTemplate": "blog-highlights.php"
+    },
+    "supports": {
+        "align": false
+    },
+    "example": {}
+}
