@@ -121,8 +121,7 @@ if ( function_exists( 'register_nav_menus' ) ) {
     register_nav_menus(
         array(
           'main_menu' => 'Main Menu',
-          'footer_menu_one' => 'Footer Menu One',
-          'footer_menu_two' => 'Footer Menu Two',
+          'footer_menu' => 'Footer Menu',
         )
     );
 }

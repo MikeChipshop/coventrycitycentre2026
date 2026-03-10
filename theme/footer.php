@@ -3,14 +3,7 @@
         <div class="ccc26_global-footer-top">
             <div class="ccc26_global-footer-column">
                 <nav>
-                    <h2>Helpful Links for Visitors</h2>
-                    <ul><?php wp_nav_menu( array('container' => false, 'theme_location' => 'footer_menu_one' )); ?></ul>
-                </nav>
-            </div>
-            <div class="ccc26_global-footer-column">
-                <nav>
-                    <h2>Helpful Links for Business</h2>
-                    <ul><?php wp_nav_menu( array('container' => false, 'theme_location' => 'footer_menu_two' )); ?></ul>
+                    <ul><?php wp_nav_menu( array('container' => false, 'theme_location' => 'footer_menu' )); ?></ul>
                 </nav>
             </div>
             <div class="ccc26_global-footer-column logo">

@@ -35,34 +35,54 @@
         <nav>
             <ul>
                 <?php 
-                    if(get_field('content_grid') === 'default' || get_field('content_grid') === 'currentcat' || get_field('content_grid') === 'pages'):
+                // TODO
+                    if(get_field('content_grid') === 'default' || get_field('content_grid') === 'currentcat' || get_field('content_grid') === 'pages' || get_field('content_grid') === 'post'):
                 ?>
                     <?php 
-                        if (get_field('content_grid') === 'currentcat'):
+                        if (get_field('content_grid') === 'currentcat'):                            
                             $terms = get_the_terms( get_the_ID(), 'section' );
                             if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
                                 $first_term = $terms[0];
                                 $directoryTerm = esc_html( $first_term->slug );
                             }
                             $postTypeSelected = 'directory';
+
                         elseif (get_field('content_grid') === 'pages'): 
                             $postTypeSelected = 'page';
+
+                        elseif (get_field('content_grid') === 'post'):
+                            $postTypeSelected = 'post';
+
                         else:
                             $postTypeSelected = 'directory';
+
                         endif; 
                     
-                        $args = array(
-                            'post_type' => $postTypeSelected,
-                            'posts_per_page' => 10,
-                            'orderby' => 'rand',
-                            'tax_query' => array(
-                            array (
-                                    'taxonomy' => 'section',
-                                    'field' => 'slug',
-                                    'terms' => $directoryTerm,
-                                )
-                            ),
-                        );
+                        if (get_field('content_grid') === 'currentcat'): 
+                            $args = array(
+                                'post_type' => $postTypeSelected,
+                                'posts_per_page' => 10,
+                                'orderby' => 'rand',
+                                'tax_query' => array(
+                                array (
+                                        'taxonomy' => 'section',
+                                        'field' => 'slug',
+                                        'terms' => $directoryTerm,
+                                    )
+                                ),
+                            );
+                        elseif (get_field('content_grid') === 'post'): 
+                            $args = array(
+                                'post_type' => 'post',
+                                'posts_per_page' => 20,
+                            );
+                        else:
+                            $args = array(
+                                'post_type' => $postTypeSelected,
+                                'posts_per_page' => 10,
+                                'orderby' => 'rand',
+                            );
+                        endif;
                     ?>     
                     <?php $query = new WP_Query( $args ); if ( $query->have_posts() ) : ?>
                         <?php while ( $query->have_posts() ) : $query->the_post(); ?>

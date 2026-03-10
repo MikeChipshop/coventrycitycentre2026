@@ -500,7 +500,7 @@ header.ccc26_global-header {
 }
 .ccc26_global-footer-top {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 	gap:32px;
 }
 .ccc26_global-footer-column nav {
@@ -517,7 +517,7 @@ header.ccc26_global-header {
 }
 .ccc26_global-footer-column ul {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 0px 24px;
 }
 .ccc26_global-footer-bottom {
