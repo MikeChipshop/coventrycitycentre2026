@@ -33,7 +33,6 @@
             </header>
         <?php endif; ?>
         <nav>
-            <ul>
                 <?php 
                 // TODO
                     if(get_field('content_grid') === 'default' || get_field('content_grid') === 'currentcat' || get_field('content_grid') === 'pages' || get_field('content_grid') === 'post'):
@@ -72,9 +71,11 @@
                                 ),
                             );
                         elseif (get_field('content_grid') === 'post'): 
+                            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                             $args = array(
                                 'post_type' => 'post',
                                 'posts_per_page' => 20,
+                                'paged' => $paged,
                             );
                         else:
                             $args = array(
@@ -85,6 +86,7 @@
                         endif;
                     ?>     
                     <?php $query = new WP_Query( $args ); if ( $query->have_posts() ) : ?>
+                        <ul>
                         <?php while ( $query->have_posts() ) : $query->the_post(); ?>
                             <li>                    
                                 <figure>
@@ -105,6 +107,16 @@
                                 <div><a href="<?php the_permalink(); ?>">Find out more ></a></div>                    
                             </li>
                         <?php endwhile; ?>
+                                </ul>
+                                <div class='pagination'>  
+                    <?php $big = 999999999; // need an unlikely integer
+    echo paginate_links( array(
+        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+        'format' => '?paged=%#%',
+        'current' => max( 1, get_query_var('paged') ),
+        'total' => $query->max_num_pages
+    ) ); ?>
+                </div>
                     <?php endif; wp_reset_query(); ?>
                 <?php elseif(get_field('content_grid') === 'sections'): ?>
                     <?php 
@@ -123,6 +135,7 @@
                         );
                     ?>   
                     <?php $query = new WP_Query( $args ); if ( $query->have_posts() ) : ?>
+                        <ul>
                         <?php while ( $query->have_posts() ) : $query->the_post(); ?>
                             <li>                    
                                 <figure>
@@ -143,9 +156,11 @@
                                 <div><a href="<?php the_permalink(); ?>">Find out more ></a></div>                    
                             </li>
                         <?php endwhile; ?>
+                        </ul>
                     <?php endif; wp_reset_query(); ?>
                 <?php else: ?>
                     <?php if( have_rows('custom_grid_items') ): ?>
+                    <ul>
                         <?php while( have_rows('custom_grid_items') ) : the_row(); ?>
                             <?php 
                                 $itemTitle = get_sub_field('title');
@@ -176,10 +191,10 @@
                                     <div class="ccc26_mini-grid-excerpt"><?php echo $itemExcerpt; ?></div>
                                 <?php endif; ?>
                             </li>
-                        <?php endwhile; ?>                    
-                    <?php endif; ?>        
-                <?php endif; ?>
-            </ul>
+                        <?php endwhile; ?> 
+                    </ul>                   
+                <?php endif; ?>        
+            <?php endif; ?>
         </nav>
     </div>    
 </section>

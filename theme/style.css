@@ -282,6 +282,37 @@ button.ccc26_favourite-button.is-fav svg path {
 .ccc26_mini-grid ul div a {
     color: var(--color-deep-blue);
 }
+.pagination {
+	display: flex;
+    gap: 8px;
+	justify-content: center;
+    padding-top: 64px;
+}
+.page-numbers {
+    background-color: var(--color-purple);
+    display: block;
+    height: 48px;
+    width: 48px;
+    color: var(--color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+	transition:background-color .3s ease-in-out;
+}
+.page-numbers.current,
+.page-numbers:hover {
+	background-color: var(--color-yellow);
+}
+span.page-numbers.dots {
+    background-color: transparent;
+    color: var(--color-purple);
+}
+a.prev.page-numbers,
+a.next.page-numbers {
+    width: 100%;
+    max-width: 120px;
+}
 /* ------------------------------------------------
  Favourites
 ------------------------------------------------ */
@@ -567,6 +598,19 @@ header.ccc26_global-header {
 	}	
 	.ccc26_global-header-column nav ul li:last-child {
 		padding-right: 16px;
+	}
+}
+
+@media only screen and (max-width : 740px){
+	.page-numbers {
+		display:none;
+	}
+	.page-numbers.current {
+		display:flex;
+	}
+	a.prev.page-numbers,
+	a.next.page-numbers {
+		display:flex;
 	}
 }
 
