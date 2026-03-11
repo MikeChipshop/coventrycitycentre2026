@@ -45,7 +45,102 @@
 .wp-block[data-align="wide"] {
     max-width: 100%!important;
 }
-
+/* ------------------------------------------------
+ Single Post RTE
+------------------------------------------------ */
+.single .ccc26_page-content {
+	padding:32px 0px;
+}
+.single .ccc26_page-content > p {
+	max-width: 860px;
+    margin-inline: auto;
+    padding: 0 16px 16px 16px;
+}
+.single .ccc26_page-content > p a,
+.wp-block-list a {
+	color: var(--color-pink);
+	text-decoration:none;
+}
+.single .ccc26_page-content > p a:hover,
+.wp-block-list a:hover {
+	text-decoration:underline;
+}
+.single .ccc26_page-content > h1:first-child {
+	color: var(--color-pink)!important;
+    font-family: "zuume", sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    font-size: 40px;
+    text-wrap: balance;
+	max-width: 860px;
+    margin-inline: auto;
+    padding: 0 16px 32px 16px;
+}
+.wp-block-heading {
+    max-width: 860px;
+    margin-inline: auto;
+    padding: 0 16px 16px 16px;
+}
+h1.wp-block-heading {
+	color: var(--color-pink);
+	font-family: "zuume", sans-serif;
+	font-weight: 700;
+	line-height: 1;
+	font-size: 32px;
+	text-wrap: balance;
+}
+h2.wp-block-heading {
+	color: var(--color-deep-blue);
+	font-family: "zuume", sans-serif;
+	font-weight: 700;
+	line-height: 1;
+	font-size: 24px;
+	text-wrap: balance;
+}
+h3.wp-block-heading {
+	color: var(--color-deep-blue);
+	font-size: 20px;
+	text-wrap: balance;
+}
+h4.wp-block-heading,
+h5.wp-block-heading,
+h6.wp-block-heading {
+	color: var(--color-deep-blue);
+	font-size: 18px;
+	text-wrap: balance;
+}
+figcaption.wp-element-caption {
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.wp-block-image {
+    max-width: 860px;
+    margin-inline: auto;
+    padding: 0 16px 16px 16px;
+}
+.wp-block-post-title {
+    color: var(--color-pink) !important;
+    font-family: "zuume", sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    font-size: 40px;
+    text-wrap: balance;
+    max-width: 860px;
+    margin-inline: auto;
+    padding: 0 16px 32px 16px;
+}
+.wp-block-list {
+	max-width: 860px;
+    margin-inline: auto;
+    padding: 0 16px 16px 36px;
+}
+ul.wp-block-list {
+	list-style-type: disc;
+}
+ol.wp-block-list {
+	list-style-type: decimal;
+}
 /* ------------------------------------------------
  Carousel Grid
 ------------------------------------------------ */
