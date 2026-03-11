@@ -1,24 +1,16 @@
 <?php
     $id = 'ccc26_block-' . $block['id'];
-    if( !empty($block['anchor']) ):
-        $id = $block['anchor'];
-    endif;
+    if( !empty($block['anchor']) ): $id = $block['anchor']; endif;
+    
     $className = 'ccc26_block';
-    if( !empty($block['className']) ):
-        $className .= ' ' . $block['className'];
-    endif;
-    if( !empty($block['align']) ):
-        $className .= ' align' . $block['align'];
-    endif;
+    if( !empty($block['className']) ): $className .= ' ' . $block['className']; endif;
+    if( !empty($block['align']) ): $className .= ' align' . $block['align']; endif;
 
     $gridTitle = get_field('grid_title');
     $gridIntro = get_field('grid_intro');
 ?>
 
-<section 
-    id="<?php echo esc_attr($id); ?>" 
-    class="<?php echo esc_attr($className); ?> ccc26_mini-grid <?php echo get_field('content_grid'); ?>"     
->
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> ccc26_mini-grid <?php echo get_field('content_grid'); ?>">
     <div class="ccc26_wrap">
         <?php if($gridTitle || $gridIntro): ?>
             <header class="ccc26_mini-grid-header">
@@ -33,93 +25,28 @@
             </header>
         <?php endif; ?>
         <nav>
-                <?php 
-                // TODO
-                    if(get_field('content_grid') === 'default' || get_field('content_grid') === 'currentcat' || get_field('content_grid') === 'pages' || get_field('content_grid') === 'post'):
-                ?>
-                    <?php 
-                        if (get_field('content_grid') === 'currentcat'):                            
-                            $terms = get_the_terms( get_the_ID(), 'section' );
-                            if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
-                                $first_term = $terms[0];
-                                $directoryTerm = esc_html( $first_term->slug );
-                            }
-                            $postTypeSelected = 'directory';
+            <?php if(get_field('content_grid') != 'custom'): ?>
+                <?php                 
+                    if (get_field('content_grid') === 'currentcat'): 
+                        $terms = get_the_terms( get_the_ID(), 'section' );
+                        if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+                            $first_term = $terms[0];
+                            $directoryTerm = esc_html( $first_term->slug );
+                        }
 
-                        elseif (get_field('content_grid') === 'pages'): 
-                            $postTypeSelected = 'page';
-
-                        elseif (get_field('content_grid') === 'post'):
-                            $postTypeSelected = 'post';
-
-                        else:
-                            $postTypeSelected = 'directory';
-
-                        endif; 
-                    
-                        if (get_field('content_grid') === 'currentcat'): 
-                            $args = array(
-                                'post_type' => $postTypeSelected,
-                                'posts_per_page' => 10,
-                                'orderby' => 'rand',
-                                'tax_query' => array(
-                                array (
-                                        'taxonomy' => 'section',
-                                        'field' => 'slug',
-                                        'terms' => $directoryTerm,
-                                    )
-                                ),
-                            );
-                        elseif (get_field('content_grid') === 'post'): 
-                            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                            $args = array(
-                                'post_type' => 'post',
-                                'posts_per_page' => 20,
-                                'paged' => $paged,
-                            );
-                        else:
-                            $args = array(
-                                'post_type' => $postTypeSelected,
-                                'posts_per_page' => 10,
-                                'orderby' => 'rand',
-                            );
-                        endif;
-                    ?>     
-                    <?php $query = new WP_Query( $args ); if ( $query->have_posts() ) : ?>
-                        <ul>
-                        <?php while ( $query->have_posts() ) : $query->the_post(); ?>
-                            <li>                    
-                                <figure>
-                                    <a href="<?php the_permalink(); ?>">
-                                        <?php if(has_post_thumbnail($post->ID)):
-                                            echo get_the_post_thumbnail($post->ID, 'medium_large');
-                                        else: ?>
-                                            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/placeholder.png" alt="<?php echo get_the_title($post->ID); ?> thumbnail">
-                                        <?php endif; ?>
-                                    </a>
-                                    <button class="ccc26_favourite-button ccc26_toggle-favourite" data-id="<?php echo get_the_ID(); ?>"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z"/></svg></button>
-                                </figure>
-                                <?php if($gridTitle): ?>
-                                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                                <?php else: ?>
-                                    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                                <?php endif; ?>
-                                <div><a href="<?php the_permalink(); ?>">Find out more ></a></div>                    
-                            </li>
-                        <?php endwhile; ?>
-                                </ul>
-                                <div class='pagination'>  
-                    <?php $big = 999999999; // need an unlikely integer
-    echo paginate_links( array(
-        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-        'format' => '?paged=%#%',
-        'current' => max( 1, get_query_var('paged') ),
-        'total' => $query->max_num_pages
-    ) ); ?>
-                </div>
-                    <?php endif; wp_reset_query(); ?>
-                <?php elseif(get_field('content_grid') === 'sections'): ?>
-                    <?php 
+                        $args = array(
+                            'post_type' => 'directory',
+                            'posts_per_page' => 10,
+                            'orderby' => 'rand',
+                            'tax_query' => array(
+                            array (
+                                    'taxonomy' => 'section',
+                                    'field' => 'slug',
+                                    'terms' => $directoryTerm,
+                                )
+                            ),
+                        );
+                    elseif(get_field('content_grid') === 'sections'):
                         $sectionTerm = get_field('section_term');
                         $args = array(
                             'post_type' => 'directory',
@@ -133,9 +60,30 @@
                                 )
                             ),
                         );
-                    ?>   
-                    <?php $query = new WP_Query( $args ); if ( $query->have_posts() ) : ?>
-                        <ul>
+                    elseif (get_field('content_grid') === 'post'): 
+                        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                        $args = array(
+                            'post_type' => 'post',
+                            'posts_per_page' => 20,
+                            'paged' => $paged,
+                        );
+                    elseif (get_field('content_grid') === 'pages'):
+                        $args = array(
+                            'post_type' => 'page',
+                            'posts_per_page' => 10,
+                            'orderby' => 'rand',
+                        );
+                    else:
+                        $args = array(
+                            'post_type' => 'directory',
+                            'posts_per_page' => 10,
+                            'orderby' => 'rand',
+                        );
+                    endif;
+                ?>     
+
+                <?php $query = new WP_Query( $args ); if ( $query->have_posts() ) : ?>
+                    <ul>
                         <?php while ( $query->have_posts() ) : $query->the_post(); ?>
                             <li>                    
                                 <figure>
@@ -146,7 +94,9 @@
                                             <img src="<?php bloginfo('stylesheet_directory'); ?>/img/placeholder.png" alt="<?php echo get_the_title($post->ID); ?> thumbnail">
                                         <?php endif; ?>
                                     </a>
-                                    <button class="ccc26_favourite-button ccc26_toggle-favourite" data-id="<?php echo get_the_ID(); ?>"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z"/></svg></button>
+                                    <?php if(get_field('content_grid') === 'currentcat' || get_field('content_grid') === 'default' || get_field('content_grid') === 'sections'): ?>
+                                        <button class="ccc26_favourite-button ccc26_toggle-favourite" data-id="<?php echo get_the_ID(); ?>"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z"/></svg></button>
+                                    <?php endif; ?>
                                 </figure>
                                 <?php if($gridTitle): ?>
                                     <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
@@ -156,10 +106,26 @@
                                 <div><a href="<?php the_permalink(); ?>">Find out more ></a></div>                    
                             </li>
                         <?php endwhile; ?>
-                        </ul>
-                    <?php endif; wp_reset_query(); ?>
-                <?php else: ?>
-                    <?php if( have_rows('custom_grid_items') ): ?>
+                    </ul>
+                    <?php if(get_field('content_grid') === 'post'): ?>
+                        <div class='pagination'>  
+                            <?php 
+                                $big = 999999999;
+                                echo paginate_links( array(
+                                    'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                                    'format' => '?paged=%#%',
+                                    'current' => max( 1, get_query_var('paged') ),
+                                    'total' => $query->max_num_pages
+                                ) ); 
+                            ?>
+                        </div>
+                    <?php endif; ?>
+                <?php endif; wp_reset_query(); ?>
+                
+
+            <?php else: ?>
+
+                <?php if( have_rows('custom_grid_items') ): ?>
                     <ul>
                         <?php while( have_rows('custom_grid_items') ) : the_row(); ?>
                             <?php 
@@ -193,7 +159,8 @@
                             </li>
                         <?php endwhile; ?> 
                     </ul>                   
-                <?php endif; ?>        
+                <?php endif; ?>   
+
             <?php endif; ?>
         </nav>
     </div>    
