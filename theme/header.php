@@ -9,6 +9,15 @@
     <link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('url'); ?>/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Coventry City Centre" />
     <link rel="manifest" href="<?php bloginfo('url'); ?>/site.webmanifest" />
+    <script>
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('<?php bloginfo('url'); ?>/serviceworker.js').then(
+                registration => console.log('Registration successful with scope ', registration.scope)
+            ).catch(err => {
+                console.log('Registration failed. Error - ', err)
+            });
+        }
+    </script>
     <?php wp_head(); ?>
 </head>
 <?php

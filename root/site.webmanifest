@@ -12,19 +12,46 @@
       "src": "/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "coventry-home.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Home screen"
+    },
+    {
+      "src": "coventry-grid.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Grid"
+    },
+    {
+      "src": "coventry-mobile.jpg",
+      "sizes": "408x902",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Mobile screen"
     }
   ],
   "theme_color": "#ef4766",
   "background_color": "#ffffff",
   "display": "standalone",
   "start_url": "https://2026.coventrycitycentre.co.uk",
+  "scope": "https://2026.coventrycitycentre.co.uk",
   "dir": "ltr",
   "lang": "en",
   "orientation": "any",
   "display_override": [
     "window-controls-overlay"
   ],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
   "id": "QtYpAe4NpzEpF",
   "description": "Welcome to Coventry, a city rich in culture and history.\n\nThousands of people visit Coventry every year to experience our unique and exciting city. With a wide variety to see and do, we have handpicked some of the best for you.",
   "shortcuts": [
