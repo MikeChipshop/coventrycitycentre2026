@@ -491,24 +491,24 @@ header.ccc26_global-header {
 /* ------------------------------------------------
  Single Post RTE
 ------------------------------------------------ */
-.single .ccc26_page-content {
+.ccc26_page-content {
 	padding:32px 0px;
 }
-.single .ccc26_page-content > p {
+.ccc26_page-content > p {
 	max-width: 860px;
     margin-inline: auto;
     padding: 0 16px 16px 16px;
 }
-.single .ccc26_page-content > p a,
+.ccc26_page-content > p a,
 .wp-block-list a {
 	color: var(--color-pink);
 	text-decoration:none;
 }
-.single .ccc26_page-content > p a:hover,
+.ccc26_page-content > p a:hover,
 .wp-block-list a:hover {
 	text-decoration:underline;
 }
-.single .ccc26_page-content > h1:first-child {
+.ccc26_page-content > h1:first-child {
 	color: var(--color-pink)!important;
     font-family: "zuume", sans-serif;
     font-weight: 700;
