@@ -145,6 +145,26 @@
     flex-basis: 75%;
 }
 
+.ccc26_information-scroll-button {
+    padding-top:32px;
+}
+.ccc26_information-scroll-button a {
+    border-radius: 100px;
+    border: 1px solid var(--color-pink);
+    padding: 4px 8px;
+    display: inline-block;
+    font-size: 14px;
+    color: var(--color-light);
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    text-align: center;
+    background-color: var(--color-pink);
+}
+.ccc26_information-scroll-button a:hover {
+    background-color: var(--color-deep-blue);
+    border-color: var(--color-deep-blue);
+}
+
 @media only screen and (max-width : 780px){
     .ccc26_information-top {
         display: block;

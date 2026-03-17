@@ -90,7 +90,16 @@
                             <?php endwhile; ?>
                         <?php endif; ?>
                     </ul>
-                </div>    
+                </div>  
+                <?php if(get_field('scroll_button')): ?>
+                    <?php
+                        $scrollTarget = get_field('scroll_button_target');
+                        $scrollLabel = get_field('scroll_button_label');
+                    ?>
+                    <div class="ccc26_information-scroll-button">
+                        <a href="#<?php echo $scrollTarget; ?>" title="<?php echo $scrollLabel; ?>"><?php echo $scrollLabel; ?></a>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>
