@@ -625,8 +625,14 @@ ol.wp-block-list {
 	font-size:18px;
 	padding-top:40px;
 }
+.ccc26_global-footer-column.logo {
+	display:flex;
+	gap:32px;
+}
 .ccc26_global-footer-column.logo img {
-	width:100%;
+	max-width:100%;
+	max-height:80px;
+	width:auto;
 }
 
 @media only screen and (max-width : 1040px){
