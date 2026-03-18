@@ -59,7 +59,8 @@
     margin:0px;
     list-style-type: none;
 }
-.ccc26_navigation-grid-column nav a::before {
+.ccc26_navigation-grid-column nav a::before,
+.ccc26_navigation-grid-column > figure a::before {
     display: block;
     content: "";
     position: absolute;
@@ -73,7 +74,8 @@
 	border-radius: 32px;
 	overflow: hidden;
 }
-.ccc26_navigation-grid-column nav a:hover::before {
+.ccc26_navigation-grid-column nav a:hover::before,
+.ccc26_navigation-grid-column > figure a:hover::before {
     opacity: .9;
 }
 .ccc26_navigation-grid-column nav a {
