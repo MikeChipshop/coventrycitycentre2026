@@ -448,6 +448,10 @@ header.ccc26_global-header {
 	display: flex;
     align-items: center;
 	white-space: nowrap;
+	transition:color .3s ease-in-out;
+}
+.ccc26_global-header-column nav ul li a:hover {
+	color:var(--color-pink);
 }
 .ccc26_global-header-column nav ul li a svg {
 	margin-right:4px;
@@ -472,6 +476,13 @@ header.ccc26_global-header {
     align-items: center;
     gap: 20px;
 	flex:1;
+}
+.ccc26_global-header-column:first-child {
+	opacity:1;
+	transition:opacity .3s ease-in-out;
+}
+.ccc26_global-header-column:first-child:hover {
+	opacity:.6;
 }
 
 /* Large */
