@@ -40,6 +40,14 @@
                 <?php else: ?>
                     <h2><?php echo $mainTitle; ?></h2>
                 <?php endif; ?>
+                <?php if( get_field('add_purple_flag_banner')): ?>
+                    <?php 
+                        $attachment_id_banner = get_field('purple_flag_banner','option');
+                        $size_banner = "full";
+                        $image_banner = wp_get_attachment_image_src( $attachment_id_banner, $size_banner ); 
+                    ?>
+                    <img src="<?php echo $image_banner[0]; ?>" alt="Purple Flag" class="ccc26_purple-flag-banner">
+                <?php endif; ?>
                 <?php echo $mainContent; ?>
                 <div class="ccc26_information-nav">
                     <ul>
