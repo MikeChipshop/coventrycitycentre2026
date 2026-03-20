@@ -56,6 +56,11 @@
 .ccc26_search-form form button {
 	background-color:var(--color-pink);
 	color:var(--color-light);
+	cursor:pointer;
+	transition:background-color .3s ease-in-out;
+}
+.ccc26_search-form form button:hover {
+	background-color:var(--color-yellow);
 }
 .ccc26_search-tips {
     display: flex;
@@ -87,9 +92,14 @@
 	gap:64px;
 	line-height:1;
 	text-decoration: none;
+	transition:background-color .3s ease-in-out;
+}
+.ccc26_search-lucky-dip a:hover {
+    background-color: var(--color-yellow);
 }
 .ccc26_search-cats-check ul {
     display: flex;
+	flex-flow:row wrap;
     align-items: center;
     justify-content: center;
     font-size: 24px;
@@ -140,15 +150,16 @@
 }
 
 @media only screen and (max-width : 820px){
-	.ccc26_search-cats-check {
+	/* .ccc26_search-cats-check {
 		overflow-y:auto;
-	}
+	} */
 	.ccc26_search-cats-check ul label {
 		white-space:nowrap;
 	}
+	/*
 	.ccc26_search-cats-check ul {
 		justify-content:start;
-	}
+	} */
 	.ccc26_search-tips {
 		display:block;
 		text-align:center;
