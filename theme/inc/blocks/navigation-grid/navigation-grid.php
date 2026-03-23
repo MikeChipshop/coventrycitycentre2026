@@ -17,12 +17,21 @@
     $image = get_field('main_image');
     $imageTitle = get_field('main_image_title');
     $imageLink = get_field('main_image_link');
+
+    $imageSecondary = get_field('secondary_image');
+    $imageTitleSecondary = get_field('secondary_image_title');
+    $imageLinkSecondary = get_field('secondary_image_link');
+
     $Title = get_field('main_title');
     $content = get_field('main_content');
 
     $attachment_id = get_field('main_image');
     $size = "full";
     $image = wp_get_attachment_image_src( $attachment_id, $size ); 
+
+    $attachment_id_2 = get_field('secondary_image');
+    $size_2 = "full";
+    $image_2 = wp_get_attachment_image_src( $attachment_id_2, $size_2 ); 
 
 ?>
 
@@ -42,6 +51,18 @@
                     </a>    
                 <?php endif; ?>
             </figure>
+            <?php if($imageSecondary): ?>
+                <figure>
+                    <?php if($imageLinkSecondary): ?>
+                        <a href="<?php echo $imageLinkSecondary; ?>" title="<?php echo $imageTitleSecondary; ?>">
+                    <?php endif; ?>
+                    <img src="<?php echo $image_2[0]; ?>" alt="<?php echo $imageTitleSecondary; ?>">
+                    <?php if($imageTitleSecondary): ?><h3><?php echo $imageTitleSecondary; ?></h3><?php endif; ?>
+                    <?php if($imageLinkSecondary): ?>
+                        </a>    
+                    <?php endif; ?>
+                </figure>
+            <?php endif; ?>
             <div class="ccc26_navigation-grid-content">
                 <?php if($Title): ?><h2><?php echo $Title; ?></h2><?php endif; ?>
                 <?php if($content): ?><p><?php echo $content; ?></p><?php endif; ?>
