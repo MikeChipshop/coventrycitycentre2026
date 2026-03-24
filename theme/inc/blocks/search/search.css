@@ -133,6 +133,9 @@
     text-decoration: none;
 	cursor:pointer;
 }
+.ccc26_search-cats-check ul label:active {
+	background-color: var(--color-pink);
+}
 .ccc26_search-cats-check ul label:hover,
 .ccc26_search-cats-check input:checked + label {
     background-color: var(--color-yellow);
