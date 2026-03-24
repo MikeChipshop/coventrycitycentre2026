@@ -88,6 +88,16 @@
 }
 .ccc26_carousel-grid button svg {
 	height:40px;
+	cursor:pointer;
+	transition:all .3s ease-in-out;
+	opacity:1;
+	scale:1;
+}
+.ccc26_carousel-grid button:hover svg {
+	opacity:.8;
+}
+.ccc26_carousel-grid button:active svg {
+	scale:.97;
 }
 
 @media only screen and (max-width : 1020px){
