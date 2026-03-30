@@ -15,3 +15,29 @@
     max-width: 100%;
     display:block;
 }
+.ccc26_video-embed {
+    position:relative;
+}
+.ccc26_video-embed button {
+    border: none;
+    background-color: var(--color-pink);
+    height: 46px;
+    width: 46px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    cursor: pointer;
+    opacity: 0;
+    transition:opacity 0.3s ease-in-out;
+    z-index:10;
+}
+.ccc26_video-embed:hover button {
+    opacity: 1;
+}
+.ccc26_video-embed button svg path {
+    fill:#fff;
+}
