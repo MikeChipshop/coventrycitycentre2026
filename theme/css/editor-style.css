@@ -141,6 +141,16 @@ ul.wp-block-list {
 ol.wp-block-list {
 	list-style-type: decimal;
 }
+.wp-block-quote {
+    max-width: 830px;
+    margin-inline: auto;
+    padding: 0 16px 0px 16px;
+    border-left: 4px solid var(--color-pink);
+    margin-bottom: 16px;
+}
+.wp-block-quote p:last-child {
+	padding-bottom:0px;
+}
 /* ------------------------------------------------
  Carousel Grid
 ------------------------------------------------ */
