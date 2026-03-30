@@ -22,6 +22,10 @@
     $imageTitleSecondary = get_field('secondary_image_title');
     $imageLinkSecondary = get_field('secondary_image_link');
 
+    $imageTertiary = get_field('tertiary_image');
+    $imageTitleTertiary = get_field('tertiary_image_title');
+    $imageLinkTertiary = get_field('tertiary_image_link');
+
     $Title = get_field('main_title');
     $content = get_field('main_content');
 
@@ -32,6 +36,10 @@
     $attachment_id_2 = get_field('secondary_image');
     $size_2 = "full";
     $image_2 = wp_get_attachment_image_src( $attachment_id_2, $size_2 ); 
+
+    $attachment_id_3 = get_field('tertiary_image');
+    $size_3 = "full";
+    $image_3 = wp_get_attachment_image_src( $attachment_id_3, $size_3 ); 
 
 ?>
 
@@ -52,16 +60,28 @@
                 <?php endif; ?>
             </figure>
             <?php if($imageSecondary): ?>
-                <figure>
-                    <?php if($imageLinkSecondary): ?>
-                        <a href="<?php echo $imageLinkSecondary; ?>" title="<?php echo $imageTitleSecondary; ?>">
-                    <?php endif; ?>
-                    <img src="<?php echo $image_2[0]; ?>" alt="<?php echo $imageTitleSecondary; ?>">
-                    <?php if($imageTitleSecondary): ?><h3><?php echo $imageTitleSecondary; ?></h3><?php endif; ?>
-                    <?php if($imageLinkSecondary): ?>
-                        </a>    
-                    <?php endif; ?>
-                </figure>
+                <div class="ccc26_navigation-grid-column-secondary">
+                    <figure>
+                        <?php if($imageLinkSecondary): ?>
+                            <a href="<?php echo $imageLinkSecondary; ?>" title="<?php echo $imageTitleSecondary; ?>">
+                        <?php endif; ?>
+                        <img src="<?php echo $image_2[0]; ?>" alt="<?php echo $imageTitleSecondary; ?>">
+                        <?php if($imageTitleSecondary): ?><h3><?php echo $imageTitleSecondary; ?></h3><?php endif; ?>
+                        <?php if($imageLinkSecondary): ?>
+                            </a>    
+                        <?php endif; ?>
+                    </figure>
+                    <figure>
+                        <?php if($imageLinkTertiary): ?>
+                            <a href="<?php echo $imageLinkTertiary; ?>" title="<?php echo $imageTitleTertiary; ?>">
+                        <?php endif; ?>
+                        <img src="<?php echo $image_3[0]; ?>" alt="<?php echo $imageTitleTertiary; ?>">
+                        <?php if($imageTitleTertiary): ?><h3><?php echo $imageTitleTertiary; ?></h3><?php endif; ?>
+                        <?php if($imageLinkTertiary): ?>
+                            </a>    
+                        <?php endif; ?>
+                    </figure>
+                </div>
             <?php endif; ?>
             <div class="ccc26_navigation-grid-content">
                 <?php if($Title): ?><h2><?php echo $Title; ?></h2><?php endif; ?>
