@@ -120,6 +120,72 @@
     white-space: nowrap !important;
     position: absolute !important;
 }
+.ccc26_pos [data-ff-el="root"].ff-69c53b986c0e12d1f419b390 .ff-69c53b986c0e12d1f419b390__container {
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+    background: transparent;
+}
+.ccc26_pos [data-ff-el="root"].ff-69c53b986c0e12d1f419b390 .ff-69c53b986c0e12d1f419b390__button {
+    background: var(--color-yellow);
+    color: var(--color-light);
+    width: 200px;
+    margin-inline: auto;
+    display: block;
+    border: none;
+    margin-top: 16px;
+    border-radius: 100px;
+    font-family: "zuume", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    padding: 8px 24px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    line-height:normal;
+}
+.ccc26_pos [data-ff-el="root"].ff-69c53b986c0e12d1f419b390 .ff-69c53b986c0e12d1f419b390__button:hover {
+    background: var(--color-pink);
+}
+.ccc26_pos [data-ff-el="root"].ff-69c53b986c0e12d1f419b390 .ff-69c53b986c0e12d1f419b390__control{
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 24px;
+    font-family: "zuume", sans-serif;
+    font-weight: 700;
+    background-color: var(--color-light);
+    color: var(--color-purple);
+    border: none;
+    width: 100%;
+    max-width: 100%;
+}
+.ccc26_pos [data-ff-el="root"].ff-69c53b986c0e12d1f419b390 .ff-69c53b986c0e12d1f419b390__control::placeholder {
+    color: var(--color-deep-blue);
+}
+.ccc26_pos [data-ff-el="root"].ff-69c53b986c0e12d1f419b390 .fd-form-feedback {
+    margin: 8px 0 0 0;
+    font-size: 14px;
+    text-align: center;
+}
+.ccc26_pos [data-ff-el="root"].ff-69c53b986c0e12d1f419b390 .fd-form-group.fd-has-error .fd-form-feedback, 
+.ccc26_pos [data-ff-el="root"].ff-69c53b986c0e12d1f419b390 .fd-form-group.fd-has-error .fd-form-check {
+    color: #ff6d5e !important;
+}
+.ccc26_pos [data-ff-el="root"].ff-69c53b986c0e12d1f419b390 .ff-69c53b986c0e12d1f419b390__label {
+    color: #c38bab;
+    padding: 12px 20px;
+    font-size: 24px;
+    font-family: "zuume", sans-serif;
+    font-weight: 700;
+}
+.ccc26_pos [data-ff-el="root"].ff-69c53b986c0e12d1f419b390 .fd-form-check__label {
+    color:var(--color-light);
+    font-size:22px;
+}
+.ccc26_pos [data-ff-el="root"].ff-69c53b986c0e12d1f419b390 .ff-69c53b986c0e12d1f419b390__success-message {
+    color: #97ff91;
+    font-size: 22px;
+}
 
 @media only screen and (max-width : 800px){
 	.ccc26_wrap.ccc26_pos-columns {
