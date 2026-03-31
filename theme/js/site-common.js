@@ -19,6 +19,8 @@ jQuery(document).ready(function( $ ) {
     
 });
 
+
+document.addEventListener("DOMContentLoaded", () => {
 /* Favourite Items Logic */
 
 
@@ -243,11 +245,12 @@ loadFavPosts(favOptions);
 /***************************************************/
 const allBox = document.getElementById("all");
 const otherBoxes = [
-    "whatson",
+    "travel",
     "shop",
     "dine",
     "staying",
     "todo",
+    "nightlife",
     "heritage"
 ].map(id => document.getElementById(id));
 
@@ -261,8 +264,18 @@ allBox.addEventListener("change", () => {
 // When any other box is clicked → uncheck "All"
 otherBoxes.forEach(box => {
     box.addEventListener("change", () => {
+        // If this box was checked → uncheck All
         if (box.checked) {
             allBox.checked = false;
+            return;
+        }
+
+        // If no other boxes are checked → re-check All
+        const anyChecked = otherBoxes.some(b => b.checked);
+        if (!anyChecked) {
+            allBox.checked = true;
         }
     });
+});
+
 });

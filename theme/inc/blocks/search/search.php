@@ -32,12 +32,12 @@
                 <div class="ccc26_search-cats-check">
                     <ul>
                         <li><input type="checkbox" id="all" checked /><label for="all">All</label></li>
-                        <li><input type="checkbox" id="travel" name="section[]" /><label for="travel">Travel</label></li>
+                        <li><input type="checkbox" id="travel" name="section[]" value="travel" /><label for="travel">Travel</label></li>
                         <li><input type="checkbox" id="shop" name="section[]" value="shop" /><label for="shop">Shop 'till you drop</label></li>
                         <li><input type="checkbox" id="dine" name="section[]" value="dine" /><label for="dine">Eating out</label></li>
-                        <li><input type="checkbox" id="staying" name="section[]" /><label for="staying">Staying over</label></li>
+                        <li><input type="checkbox" id="staying" name="section[]" value="staying" /><label for="staying">Staying over</label></li>
                         <li><input type="checkbox" id="todo" name="section[]" value="experience" /><label for="todo">Things to do</label></li>
-                        <li><input type="checkbox" id="nightlife" name="section[]" value="nightlife" /><label for="todo">Nightlife</label></li>
+                        <li><input type="checkbox" id="nightlife" name="section[]" value="nightlife" /><label for="nightlife">Nightlife</label></li>
                         <li><input type="checkbox" id="heritage" name="section[]" value="heritage" /><label for="heritage">Heritage in Coventry</label></li>
                     </ul>
                 </div>
