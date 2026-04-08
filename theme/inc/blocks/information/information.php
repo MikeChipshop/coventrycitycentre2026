@@ -105,7 +105,11 @@
                         $scrollLabel = get_field('scroll_button_label');
                     ?>
                     <div class="ccc26_information-scroll-button">
-                        <a href="#<?php echo $scrollTarget; ?>" title="<?php echo $scrollLabel; ?>"><?php echo $scrollLabel; ?></a>
+                        <?php if(get_field('link_type') === 'external'): ?>
+                            <a href="<?php echo $scrollTarget; ?>" title="<?php echo $scrollLabel; ?>" target="_blank"><?php echo $scrollLabel; ?></a>
+                        <?php else: ?>
+                            <a href="#<?php echo $scrollTarget; ?>" title="<?php echo $scrollLabel; ?>"><?php echo $scrollLabel; ?></a>
+                        <?php endif; ?>
                     </div>
                 <?php endif; ?>
             </div>

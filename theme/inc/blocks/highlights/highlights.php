@@ -14,6 +14,7 @@
         $className .= ' align' . $block['align'];
     }
 
+    if(get_field('use_custom_content')): 
     $columnOneTitle = get_field('highlights_column_one_title'); 
     $columnTwoTitle = get_field('highlights_column_two_title');
 
@@ -25,6 +26,22 @@
 
     $linkOne = get_field('highlights_column_one_link');
     $linkTwo = get_field('highlights_column_two_link');
+
+    else:
+
+    $columnOneTitle = get_field('highlights_column_one_title','option'); 
+    $columnTwoTitle = get_field('highlights_column_two_title','option');
+
+    $OneText = get_field('highlights_column_one_text','option');
+    $TwoText = get_field('highlights_column_two_text','option');
+
+    $highlightColorOne = get_field('highlights_column_one_highlight_colour','option');
+    $highlightColorTwo = get_field('highlights_column_two_highlight_colour','option');
+
+    $linkOne = get_field('highlights_column_one_link','option');
+    $linkTwo = get_field('highlights_column_two_link','option');
+
+    endif;
 ?>
 
 <section 
