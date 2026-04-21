@@ -254,7 +254,9 @@
                 "parking": "Parking",
                 "heritage": "Heritage",
                 "shop": "Shop",
-                "independent": "Independent"
+                "independent": "Independent",
+                "nightlife": "Nightlife",
+                "travel": "Travel"
             },
             "default_value": "business",
             "return_format": "value",
@@ -287,5 +289,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1773679217
+    "modified": 1773681463
 }

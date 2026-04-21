@@ -3,6 +3,24 @@
     "title": "Navigation Grid",
     "fields": [
         {
+            "key": "field_69c1372f9988b",
+            "label": "Layout",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<img src=\"..\/wp-content\/themes\/coventrycitycentre2026\/img\/grid-layout.png\" alt=\"grid layout\">",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_6989de951c0c7",
             "label": "Main",
             "name": "",
@@ -71,6 +89,144 @@
             "key": "field_6989dfc0d6ada",
             "label": "Image Link",
             "name": "main_image_link",
+            "aria-label": "",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "post_status": "",
+            "taxonomy": "",
+            "allow_archives": 1,
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_69c10b8e836e6",
+            "label": "Secondary Image",
+            "name": "secondary_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_69c10bb4836e7",
+            "label": "Secondary Image Title",
+            "name": "secondary_image_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_69c10bcf836e8",
+            "label": "Secondary Image Link",
+            "name": "secondary_image_link",
+            "aria-label": "",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "post_status": "",
+            "taxonomy": "",
+            "allow_archives": 1,
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_69ca6fb8f2da6",
+            "label": "Tertiary Image",
+            "name": "tertiary_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_69ca6fdff2da7",
+            "label": "Tertiary Image Title",
+            "name": "tertiary_image_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_69ca6ffdf2da8",
+            "label": "Tertiary Image Link",
+            "name": "tertiary_image_link",
             "aria-label": "",
             "type": "page_link",
             "instructions": "",
@@ -166,7 +322,7 @@
             "layout": "table",
             "pagination": 0,
             "min": 5,
-            "max": 5,
+            "max": 7,
             "collapsed": "",
             "button_label": "Add Row",
             "rows_per_page": 20,
@@ -265,5 +421,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1770645714
+    "modified": 1774874650
 }

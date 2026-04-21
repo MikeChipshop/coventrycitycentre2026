@@ -1,45 +1,16 @@
 {
-    "key": "group_6913362f8f456",
-    "title": "Highlights",
+    "key": "group_69d60fc33ecd2",
+    "title": "Highlights (Global)",
     "fields": [
         {
-            "key": "field_69d60ffa36a8b",
-            "label": "Use custom content",
-            "name": "use_custom_content",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "allow_in_bindings": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_6913362f70bc4",
+            "key": "field_69d60fc340d0d",
             "label": "Column One",
             "name": "",
             "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_69d60ffa36a8b",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -50,7 +21,7 @@
             "selected": 0
         },
         {
-            "key": "field_694020d6c6244",
+            "key": "field_69d60fc340d5b",
             "label": "Highlight Colour",
             "name": "highlights_column_one_highlight_colour",
             "aria-label": "",
@@ -82,7 +53,7 @@
             "save_options": 0
         },
         {
-            "key": "field_69948379cf780",
+            "key": "field_69d60fc340da5",
             "label": "Icon",
             "name": "highlights_column_one_icon",
             "aria-label": "",
@@ -103,7 +74,7 @@
             "new_lines": ""
         },
         {
-            "key": "field_6913364670bc5",
+            "key": "field_69d60fc340dec",
             "label": "Title",
             "name": "highlights_column_one_title",
             "aria-label": "",
@@ -124,7 +95,7 @@
             "append": ""
         },
         {
-            "key": "field_69402167c6246",
+            "key": "field_69d60fc340e2c",
             "label": "Text",
             "name": "highlights_column_one_text",
             "aria-label": "",
@@ -145,7 +116,7 @@
             "append": ""
         },
         {
-            "key": "field_694021bcc6249",
+            "key": "field_69d60fc340e6b",
             "label": "Link",
             "name": "highlights_column_one_link",
             "aria-label": "",
@@ -167,22 +138,14 @@
             "allow_in_bindings": 0
         },
         {
-            "key": "field_6913365870bc6",
+            "key": "field_69d60fc340ea9",
             "label": "Column Two",
             "name": "",
             "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_69d60ffa36a8b",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -193,7 +156,7 @@
             "selected": 0
         },
         {
-            "key": "field_69402149c6245",
+            "key": "field_69d60fc340ee8",
             "label": "Highlight Colour",
             "name": "highlights_column_two_highlight_colour",
             "aria-label": "",
@@ -225,7 +188,7 @@
             "save_options": 0
         },
         {
-            "key": "field_699483bccf781",
+            "key": "field_69d60fc340f26",
             "label": "Icon",
             "name": "highlights_column_two_icon",
             "aria-label": "",
@@ -246,7 +209,7 @@
             "new_lines": ""
         },
         {
-            "key": "field_6913366170bc7",
+            "key": "field_69d60fc340f66",
             "label": "Title",
             "name": "highlights_column_two_title",
             "aria-label": "",
@@ -267,7 +230,7 @@
             "append": ""
         },
         {
-            "key": "field_6940217ac6247",
+            "key": "field_69d60fc340fa5",
             "label": "Text",
             "name": "highlights_column_two_text",
             "aria-label": "",
@@ -288,7 +251,7 @@
             "append": ""
         },
         {
-            "key": "field_6940219fc6248",
+            "key": "field_69d60fc340fe5",
             "label": "Link",
             "name": "highlights_column_two_link",
             "aria-label": "",
@@ -313,9 +276,9 @@
     "location": [
         [
             {
-                "param": "block",
+                "param": "options_page",
                 "operator": "==",
-                "value": "acf\/highlights"
+                "value": "acf-options-global"
             }
         ]
     ],
@@ -329,5 +292,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1775636950
+    "modified": 1775636806
 }
