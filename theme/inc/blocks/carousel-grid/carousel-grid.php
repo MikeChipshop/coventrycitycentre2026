@@ -61,7 +61,7 @@
                                     <figure>
                                         <a href="<?php echo get_permalink($post->ID); ?>">
                                             <?php if(has_post_thumbnail($post->ID)):
-                                                echo get_the_post_thumbnail($post->ID, 'medium_large');
+                                                echo get_the_post_thumbnail($post->ID, 'square-small');
                                             else: ?>
                                                 <img src="<?php bloginfo('stylesheet_directory'); ?>/img/placeholder.png" alt="<?php echo get_the_title($post->ID); ?> thumbnail">
                                             <?php endif; ?>
