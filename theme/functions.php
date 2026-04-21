@@ -22,6 +22,7 @@ if ( function_exists( 'add_image_size' ) ) add_theme_support( 'post-thumbnails' 
 
 if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'ad-banner', 728, 90, false );
+    add_image_size( 'square-small', 300, 300, false );
 }
 
 /****************************************************
@@ -149,7 +150,8 @@ function wpe_wp_nav_menu_objects( $items, $args ) {
 /***************************************************/
 add_action('acf/init', function() { 
     if(function_exists('acf_add_options_page')) {
-        acf_add_options_sub_page('Global');
+        acf_add_options_sub_page('Settings');
+        acf_add_options_sub_page('Global Content');
     }
 });
 
