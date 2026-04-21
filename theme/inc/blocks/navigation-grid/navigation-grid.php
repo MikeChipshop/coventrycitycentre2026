@@ -34,11 +34,11 @@
     $image = wp_get_attachment_image_src( $attachment_id, $size ); 
 
     $attachment_id_2 = get_field('secondary_image');
-    $size_2 = "full";
+    $size_2 = "square-small";
     $image_2 = wp_get_attachment_image_src( $attachment_id_2, $size_2 ); 
 
     $attachment_id_3 = get_field('tertiary_image');
-    $size_3 = "full";
+    $size_3 = "square-small";
     $image_3 = wp_get_attachment_image_src( $attachment_id_3, $size_3 ); 
 
 ?>
@@ -89,16 +89,20 @@
             </div>
         </div>
         <div class="ccc26_navigation-grid-column">
-            <?php if( have_rows('grid_items') ): ?>
+            <?php if( have_rows('grid_items') ): $i = 0; ?>
                 <nav>
                     <ul>
-                        <?php while( have_rows('grid_items') ) : the_row(); ?>
+                        <?php while( have_rows('grid_items') ) : the_row(); $i++; ?>
                             <?php
                                 $gridTitle = get_sub_field('grid_items_image_title');
                                 $gridLink = get_sub_field('grid_items_link');
 
                                 $attachment_id = get_sub_field('grid_items_image');
-                                $size = "full";
+                                if( $i === 3 ):
+                                    $size = "full";
+                                else:
+                                    $size = "square-small";
+                                endif;
                                 $image = wp_get_attachment_image_src( $attachment_id, $size ); 
                             ?>
                             <li>
