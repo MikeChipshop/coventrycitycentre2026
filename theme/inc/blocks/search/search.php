@@ -13,6 +13,14 @@
     if( !empty($block['align']) ) {
         $className .= ' align' . $block['align'];
     }
+
+    $title = get_field('search_title','option');
+    $intro = get_field('search_intro','option');
+    $buttonLabel = get_field('search_button_label','option');
+
+    $ldTitle = get_field('lucky_dip_title','option');
+    $ldIntro = get_field('lucky_dip_intro','option');
+    $ldLabel = get_field('lucky_dip_button_label','option');
 ?>
 
 <section 
@@ -21,10 +29,14 @@
 >
     <div class="ccc26_wrap">
         <header>
-            <h2>Looking for something</h2>
-            <div class="ccc26_search-intro">
-                <p>Search for shops, places to eat, venues, and services in Coventry city centre.</p>
-            </div>
+            <?php if($title): ?>
+                <h2><?php echo $title; ?></h2>
+            <?php endif; ?>
+            <?php if($intro): ?>
+                <div class="ccc26_search-intro">
+                    <p><?php echo $intro; ?></p>
+                </div>
+            <?php endif; ?>
         </header>
         
         <div class="ccc26_search-form">
@@ -43,18 +55,18 @@
                 </div>
                 <div class="ccc26_search-form-fields">
                     <input type="text" name="s" placeholder="Search..." />
-                    <button type="submit">Go</button>
+                    <button type="submit"><?php echo $buttonLabel; ?></button>
                     <input type="hidden" name="post_type" value="directory">
                 </div>
             </form>
         </div>
         <div class="ccc26_search-tips">
-            <h3>Not sure what you want to do?</h3>
-            <p>Let us choose for you...</p>
+            <h3><?php echo $ldTitle; ?></h3>
+            <p><?php echo $ldIntro; ?></p>
             <div class="ccc26_search-lucky-dip">
                 <a href="<?php bloginfo('url'); ?>/?random=1">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M560-160v-80h104L537-367l57-57 126 126v-102h80v240H560Zm-344 0-56-56 504-504H560v-80h240v240h-80v-104L216-160Zm151-377L160-744l56-56 207 207-56 56Z"/></svg> 
-                    Lucky Dip</a>
+                    <?php echo $ldLabel; ?></a>
             </div>
         </div>
     </div>
