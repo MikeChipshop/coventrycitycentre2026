@@ -33,13 +33,6 @@
                 <div class="ccc26_information-map">
                     <img src="<?php echo $image[0]; ?>" alt="<?php echo $title; ?>">
                 </div>
-            </div>
-            <div class="ccc26_information-column">
-                <?php if( get_field('intro') ): ?>
-                    <h1><?php echo $mainTitle; ?></h1>
-                <?php else: ?>
-                    <h2><?php echo $mainTitle; ?></h2>
-                <?php endif; ?>
                 <?php if( get_field('add_purple_flag_banner')): ?>
                     <?php 
                         $attachment_id_banner = get_field('purple_flag_banner','option');
@@ -48,6 +41,13 @@
                     ?>
                     <img src="<?php echo $image_banner[0]; ?>" alt="Purple Flag" class="ccc26_purple-flag-banner">
                 <?php endif; ?>
+            </div>
+            <div class="ccc26_information-column">
+                <?php if( get_field('intro') ): ?>
+                    <h1><?php echo $mainTitle; ?></h1>
+                <?php else: ?>
+                    <h2><?php echo $mainTitle; ?></h2>
+                <?php endif; ?>                
                 <?php echo $mainContent; ?>
                 <div class="ccc26_information-nav">
                     <ul>
