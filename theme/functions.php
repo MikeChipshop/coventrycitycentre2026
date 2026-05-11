@@ -229,6 +229,7 @@ function register_acf_blocks() {
     register_block_type( __DIR__ . '/inc/blocks/blog-highlights' );
     register_block_type( __DIR__ . '/inc/blocks/carousel-grid' );
     register_block_type( __DIR__ . '/inc/blocks/contact' );
+    register_block_type( __DIR__ . '/inc/blocks/culture-host' );
     register_block_type( __DIR__ . '/inc/blocks/hero-carousel' );
     register_block_type( __DIR__ . '/inc/blocks/highlights' );
     register_block_type( __DIR__ . '/inc/blocks/image-grid' );
