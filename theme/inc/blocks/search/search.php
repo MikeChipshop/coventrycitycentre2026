@@ -56,7 +56,9 @@
                 <div class="ccc26_search-form-fields">
                     <input type="text" name="s" placeholder="Search..." />
                     <button type="submit"><?php echo $buttonLabel; ?></button>
-                    <input type="hidden" name="post_type" value="directory">
+                    <input type="hidden" name="post_type[]" value="directory">
+<input type="hidden" name="post_type[]" value="post">
+
                 </div>
             </form>
         </div>
