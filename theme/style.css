@@ -700,6 +700,17 @@ ol.wp-block-list {
 	.ccc26_global-header-column nav ul li:last-child {
 		padding-right: 16px;
 	}
+	.ccc26_global-footer-top {
+		display:block;
+	}
+	.ccc26_global-footer-column nav {
+		justify-content: center;
+		padding-bottom:32px;
+	}
+	.ccc26_global-footer-column.logo {
+		justify-content: center;
+		flex-flow:row wrap;
+	}
 }
 
 @media only screen and (max-width : 740px){
